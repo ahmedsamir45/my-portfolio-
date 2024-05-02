@@ -1,0 +1,1 @@
+window.alert("it just a simple version the website will be created soon")
