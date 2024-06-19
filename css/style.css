@@ -15,7 +15,7 @@
 }
 .container{
     margin: 10px;
-    margin-top: 300px;
+    margin-top: 100px;
     padding: 10px;
 }
 body{
@@ -89,6 +89,7 @@ nav{
     display: flex;
     align-items: center;
     color: white;
+    transition: var(--main-transition);
   }
   nav a:hover{
     background-color: var(--addition-color);
@@ -111,6 +112,7 @@ nav li:last-child{
     align-items: flex-start;
     justify-content: flex-start;
   }
+
   .activesidebar{
     display: flex;
   }
@@ -122,6 +124,18 @@ nav li:last-child{
   }
   .menu-button{
     display: none;
+  }
+  i{
+    margin-right: 7px;
+  }
+  .download{
+    border-radius: 50px;
+    color: white;
+    background-color: var(--background-color);
+    text-align: center;
+  }
+  .download:hover{
+    background-color:rgb(62, 62, 202);
   }
   @media(max-width: 800px){
     .hideOnMobile{
@@ -138,15 +152,42 @@ nav li:last-child{
   }
 /* start navbar  */
 /* start welcome */
-.welcome{
+.welcome {
   width: 100%;
   height: 100vh;
   display: flex;
-  background-color: black;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 20px;
+
+
+}
+
+
+
+.welcome::before {
+  content: "";
+  position: absolute;
+  top: -200px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("landing.svg"); /* Use forward slashes here */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3; /* Adjust this value to make the image more or less transparent */
+  z-index: -1; /* Ensure the pseudo-element is behind the content */
+  margin-top: 123px;
+}
+.welcome p{
+  font-size: 30px;
+}
+@media (max-width:400px) {
+  .welcome p{
+    font-size: 22px;
+  }
 }
 .welcome a{
   text-decoration: none;
@@ -170,8 +211,8 @@ nav li:last-child{
 
 /* start skills */
 .skills table {
-  width: 100%;
-  margin: 20px 10px;
+  width: 80%;
+  margin: 20px auto;
   color: black;
   border-radius: 10px;
   border-collapse: separate;
@@ -204,30 +245,38 @@ nav li:last-child{
 /* end  skills */
 
 /* start certfications */
-/* .certfications{
-  margin: 10px auto;
-  width: fit-content;
-} */
+
 .certfications .cate {
   margin: 20px 10px;
 }
 
 .certfications .cate .images{
-  display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   column-gap: 30px;
   row-gap: 30px;
 }
 
 .certfications .cate img{
-  width: 300px;
-  height: 200px;
+  width: 400px;
+  height: 250px;
 
 }
-@media (max-width:710px) {
-  .certfications{
-    margin: 10px auto;
-    width: fit-content;
+ @media (max-width:710px) {
+  .certfications .cate .images{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .certfications .cate img{
+    width: 250px;
+    height: 150px;
+  
   }
 }
-/* end certfications */
+/* end certfications  */
