@@ -1,18 +1,233 @@
+/* start global */
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
+}
+:root{
+--background-color: #12100E;
+--nav-color:#30321C;
+--heading-color: #6B654B;
+--hover-heading: #D4DF9E;
+--addition-color:#4A4B2F;
+--main-transition:0.4s;
 }
 .container{
     margin: 10px;
-    margin-top: 100px;
+    margin-top: 300px;
     padding: 10px;
 }
 body{
-    background-color: bisque;
+    
+    background-color: var(--background-color);
     font-family: sans-serif;
+    min-height: 100vh;
+    color: white;
 }
-a{
-    display: block;
-    margin-bottom: 10px;
+
+
+.container > div:not(:last-child){
+  margin-bottom: 100px;
 }
+.main-heading{
+  display: block;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px auto;
+  color: white;
+  background-color: var(--heading-color);
+  transition: var(--main-transition);
+  width: 250px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main-heading:hover{
+  background-color: var(--hover-heading);
+  color: var(--background-color);
+}
+.second-heading{
+  padding: 10px;
+  margin: 20px auto;
+  width: 200px;
+  text-align: center;
+}
+.second-heading::before,.second-heading::after{
+  content: "";
+  height: 2px;
+  background-color: var(--addition-color);
+  display: block;
+}
+ul{
+  list-style:none;
+}
+
+/* end global */
+
+/* start navbar  */
+nav{
+    background-color: var(--nav-color);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+  }
+  nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav li{
+    height: 50px;
+  }
+  nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+  nav a:hover{
+    background-color: var(--addition-color);
+  }
+nav li:last-child{
+  margin-left: auto;
+}
+  .sidebar{
+    position: fixed;
+    top: 0; 
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .activesidebar{
+    display: flex;
+  }
+  .sidebar li{
+    width: 100%;
+  }
+  .sidebar a{
+    width: 100%;
+  }
+  .menu-button{
+    display: none;
+  }
+  @media(max-width: 800px){
+    .hideOnMobile{
+      display: none;
+    }
+    .menu-button{
+      display: block;
+    }
+  }
+  @media(max-width: 400px){
+    .sidebar{
+      width: 100%;
+    }
+  }
+/* start navbar  */
+/* start welcome */
+.welcome{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.welcome a{
+  text-decoration: none;
+  color: rgb(0, 115, 255);
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.welcome a:hover{
+  color: rgb(55, 0, 255) ;
+}
+/* end welcome */
+/* start about  */
+.about p{
+
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px 10px;
+  background-color: var(--addition-color);
+}
+/* end about  */
+
+/* start skills */
+.skills table {
+  width: 100%;
+  margin: 20px 10px;
+  color: black;
+  border-radius: 10px;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+.skills table th,
+.skills table td {
+  text-align: center;
+  padding: 15px;
+  border: 1px solid var(--background-color);
+}
+
+.skills table th {
+  text-transform: uppercase;
+  background-color: #d5d2d2;
+}
+
+
+.skills table tr{
+  transition: var(--main-transition);
+}
+.skills table tr:not(:first-child):hover{
+  background-color: #e9dead;
+
+}
+
+/* end  skills */
+
+/* start certfications */
+/* .certfications{
+  margin: 10px auto;
+  width: fit-content;
+} */
+.certfications .cate {
+  margin: 20px 10px;
+}
+
+.certfications .cate .images{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+.certfications .cate img{
+  width: 300px;
+  height: 200px;
+
+}
+@media (max-width:710px) {
+  .certfications{
+    margin: 10px auto;
+    width: fit-content;
+  }
+}
+/* end certfications */

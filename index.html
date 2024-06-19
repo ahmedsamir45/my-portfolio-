@@ -5,20 +5,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahmed Samir</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
-    <nav></nav>
+
+
+    <nav>
+        <ul class="sidebar">
+          <li onclick=hideSidebar()><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certfications">Certfications</a></li>
+          <li><a href="#projects">Pojects</a></li>
+          <li><a href="#cv">Download CV</a></li>
+          <li><a href="#services">services</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <ul>
+        
+          <li class="hideOnMobile"><a href="#about">About</a></li>
+          <li class="hideOnMobile"><a href="#skills">Skills</a></li>
+          <li class="hideOnMobile"><a href="#certfications">Certfications</a></li>
+          <li class="hideOnMobile"><a href="#projects">Pojects</a></li>
+          <li class="hideOnMobile"><a href="#cv">Download CV</a></li>
+          <li class="hideOnMobile"><a href="#services">Services</a></li>
+          <li class="hideOnMobile"><a href="#contact">Contact Us</a></li>
+          <li class="menu-button" onclick=showSidebar()><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+        </ul>
+    </nav>
+    <div class="welcome">
+      <p>Hello I am Ahmed Samir</p>
+      <p id="typing">I am a software developer</p>
+      <a href="https://ahmedsamir45.github.io/ahsamir-links/">contact me</a>
+    </div>
     <div class="container">
-    <p>hello I am ahmed samir</p>
-    <span>About: </span><p>Student at Helwan University, studying computer science and mathematics.
-         Passionate about cyber security with expertise in cloud computing and network security. Skilled in front-end development (HTML, CSS, JavaScript, Bootstrap)
-          and proficient in data science and machine learning,
-         working with sklearn, pandas, numpy, and TensorFlow. Self-taught through online courses, seeking opportunities to apply knowledge and grow in the field.</p>
-    <a href="https://linkedin.com/in/ahmed-samir-917ba22a5">linkedIn</a>
-    <a href="https://github.com/ahmedsamir45">gitHub</a>
-    <a href="https://www.kaggle.com/ahmedsamir6788">kaggle</a>
-    <a href="https://drive.google.com/drive/folders/1sbNw1kEwRUDFYyQNi7hLpVMjzx4WhXgX?usp=drive_link">certfication</a>
-    <a href="https://www.youtube.com/channel/UCdP5YKiCrzXs_e0xuBL-EWA">youtube chanel</a>
+
+  <div class="about" id="about">
+<h2 class="main-heading" >ABOUT</h2>
+  <p>
+    Student at Helwan University, studying computer science and mathematics.
+    Passionate about cyber security with expertise in cloud computing and network security. Skilled in front-end development (HTML, CSS, JavaScript, Bootstrap)
+    and proficient in data science and machine learning,
+    working with sklearn, pandas, numpy, and TensorFlow. Self-taught through online courses, seeking opportunities to apply knowledge and grow in the field.
+  </p>
+</div>
+<div class="skills" id="skills">
+  <h2 class="main-heading" >SKILLS</h2>
+  <table>
+    <tr>
+      <th>skill</th>
+      <th>descibtion</th>
+    </tr>
+    <tr>
+      <td>python</td>
+      <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, incidunt.</td>
+    </tr>
+    <tr>
+      <td>Data analysis</td>
+      <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, incidunt.</td>
+    </tr>
+    <tr>
+      <td>machine learning</td>
+      <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, incidunt.</td>
+    </tr>
+    <tr>
+      <td>Deep Learning</td>
+      <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, incidunt.</td>
+    </tr>
+    <tr>
+      <td>NLP</td>
+      <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, incidunt.</td>
+    </tr>
+    <tr>
+      <td>HTML</td>
+      <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, incidunt.</td>
+    </tr>
+    <tr>
+      <td>CSS</td>
+      <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, incidunt.</td>
+    </tr>
+    <tr>
+      <td>JavaScript</td>
+      <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, incidunt.</td>
+    </tr>
+    <tr>
+      <td>networks</td>
+      <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, incidunt.</td>
+    </tr>
+    <tr>
+      <td>cyber security</td>
+      <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, incidunt.</td>
+    </tr>
+    <tr>
+      <td>UX</td>
+      <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, incidunt.</td>
+    </tr>
+  </table>
+</div>
+<div class="certfications" id="certfications">
+  <h2 class="main-heading" >certfications</h2>
+  <div class="cate">
+    <h3 class="second-heading">python</h3>
+    <div class="images">
+      <img src="imgs/certfications/python/1.png" alt="">
+      <img src="imgs/certfications/python/2.png" alt="">
+      <img src="imgs/certfications/python/3.png" alt="">
+    </div>
+  </div>
+  <div class="cate">
+    <h3 class="second-heading">AI</h3>
+    <div class="images">
+      <img src="imgs/certfications/AI/1.png" alt="">
+      <img src="imgs/certfications/AI/2.png" alt="">
+      <img src="imgs/certfications/AI/3.png" alt="">
+      <img src="imgs/certfications/AI/4.png" alt="">
+      <img src="imgs/certfications/AI/5.png" alt="">
+      <img src="imgs/certfications/AI/6.png" alt="">
+    
+    </div>
+  </div>
+  <div class="cate">
+    <h3 class="second-heading">front end</h3>
+    <div class="images">
+      <img src="imgs/certfications/HTML and CSS and JS/1.png" alt="">
+      <img src="imgs/certfications/HTML and CSS and JS/2.jpg" alt="">
+      <img src="imgs/certfications/HTML and CSS and JS/3.jpg" alt="">
+      <img src="imgs/certfications/HTML and CSS and JS/4.jpg" alt="">
+    </div>
+  </div>
+  <div class="cate">
+    <h3 class="second-heading">back end</h3>
+    <div class="images">
+      <img src="imgs/certfications/back end/1.png" alt="">
+      <img src="imgs/certfications/back end/2.png" alt="">
+      <img src="imgs/certfications/back end/3.png" alt="">
+      <img src="imgs/certfications/back end/4.png" alt="">
+      <img src="imgs/certfications/back end/5.png" alt="">
+
+    </div>
+  </div>
+  <div class="cate">
+    <h3 class="second-heading">UI-UX</h3>
+    <div class="images">
+      <img src="imgs/certfications/UI-UX/1.png" alt="">
+      <img src="imgs/certfications/UI-UX/2.png" alt="">
+    </div>
+  </div>
+  <div class="cate">
+    <h3 class="second-heading">others</h3>
+    <div class="images">
+      <img src="imgs/certfications/others/5.png" alt="">
+      <img src="imgs/certfications/others/1.png" alt="">
+      <img src="imgs/certfications/others/2.png" alt="">
+      <img src="imgs/certfications/others/3.png" alt="">
+      <img src="imgs/certfications/soft skils/4.png" alt="">
+      <img src="imgs/certfications/soft skils/1.png" alt="">
+      <img src="imgs/certfications/soft skils/2.png" alt="">
+      <img src="imgs/certfications/soft skils/3.png" alt="">
+      <img src="imgs/certfications/others/4.png" alt="">
+      
+
+    </div>
+  </div>
+</div>
 </div>
     <script src="js/main.js"></script>
 </body>
