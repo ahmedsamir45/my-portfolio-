@@ -379,7 +379,7 @@ nav li:last-child{
 
 /* start services */
 .serv-warpper{
-text-align: center;
+  text-align: center;
 }
 .serv-warpper .serv{
   margin-bottom: 20px;
@@ -393,6 +393,9 @@ text-align: center;
   padding: 7px;
   border-radius: 50%;
   color: white;  
+}
+.serv-warpper .serv p{
+  display: inline;
 }
 .acounts{
   display: block;
