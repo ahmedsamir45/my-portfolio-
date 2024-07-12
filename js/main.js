@@ -17,6 +17,25 @@ links.forEach((link) => {
     hideSidebar()
   })
 })
+// start media query 
+function handleMediaQuery(mediaQuery) {
+  const sidebar = document.querySelector('.sidebar');
+  if (mediaQuery.matches) {
+    // If the media query matches (viewport width is at least 920px), hide the sidebar
+    sidebar.style.display = 'none';
+  }
+}
+
+// Define the media query
+const mediaQuery = window.matchMedia('(min-width: 920px)');
+
+
+
+// Listen for changes in the media query
+mediaQuery.addListener(handleMediaQuery);
+// end of media query
+
+
 // end navbar
 
 
@@ -78,3 +97,103 @@ function sendEmail(){
     message => alert("message sent succesfully")
   );
 }
+
+// start certfication 
+
+// ai
+btnAI = document.querySelector(".show.ai");
+cateAI = document.querySelector(".images.ai");
+
+btnAI.addEventListener("click", function() {
+  if (cateAI.classList.contains("showCertification")) {
+    cateAI.classList.remove("showCertification");
+    btnAI.innerHTML = "Show AI Certfications"
+  } else {
+    cateAI.classList.add("showCertification");
+    btnAI.innerHTML = "Hide AI Certfications"
+  }
+});
+
+// front end
+btnfrontend = document.querySelector(".show.frontend");
+catefrontend = document.querySelector(".images.frontend");
+
+btnfrontend.addEventListener("click", function() {
+  if (catefrontend.classList.contains("showCertification")) {
+    catefrontend.classList.remove("showCertification");
+    btnfrontend.innerHTML = "Show Front End Certifications";
+  } else {
+    catefrontend.classList.add("showCertification");
+    btnfrontend.innerHTML = "Hide Front End Certifications";
+  }
+});
+
+// back end
+btnbackend = document.querySelector(".show.backend");
+catebackend = document.querySelector(".images.backend");
+
+btnbackend.addEventListener("click", function() {
+  if (catebackend.classList.contains("showCertification")) {
+    catebackend.classList.remove("showCertification");
+    btnbackend.innerHTML = "Show back End Certifications";
+  } else {
+    catebackend.classList.add("showCertification");
+    btnbackend.innerHTML = "Hide back End Certifications";
+  }
+});
+
+//  cyber
+btncyber = document.querySelector(".show.cyber");
+catecyber = document.querySelector(".images.cyber");
+
+btncyber.addEventListener("click", function() {
+  if (catecyber.classList.contains("showCertification")) {
+    catecyber.classList.remove("showCertification");
+    btncyber.innerHTML = "Show cyber security Certifications";
+  } else {
+    catecyber.classList.add("showCertification");
+    btncyber.innerHTML = "Hide cyber security Certifications";
+  }
+});
+
+// python
+btnpython = document.querySelector(".show.python");
+catepython = document.querySelector(".images.python");
+
+btnpython.addEventListener("click", function() {
+  if (catepython.classList.contains("showCertification")) {
+    catepython.classList.remove("showCertification");
+    btnpython.innerHTML = "Show python Certifications";
+  } else {
+    catepython.classList.add("showCertification");
+    btnpython.innerHTML = "Hide python Certifications";
+  }
+});
+
+// UI/UX
+btnux = document.querySelector(".show.ux");
+cateux = document.querySelector(".images.ux");
+
+btnux.addEventListener("click", function() {
+  if (cateux.classList.contains("showCertification")) {
+    cateux.classList.remove("showCertification");
+    btnux.innerHTML = "Show UI/UX Certifications";
+  } else {
+    cateux.classList.add("showCertification");
+    btnux.innerHTML = "Hide UI/UX Certifications";
+  }
+});
+
+// others
+btnothers = document.querySelector(".show.others");
+cateothers = document.querySelector(".images.others");
+
+btnothers.addEventListener("click", function() {
+  if (cateothers.classList.contains("showCertification")) {
+    cateothers.classList.remove("showCertification");
+    btnothers.innerHTML = "Show other Certifications";
+  } else {
+    cateothers.classList.add("showCertification");
+    btnothers.innerHTML = "Hide other Certifications";
+  }
+});
