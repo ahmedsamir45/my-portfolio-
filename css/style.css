@@ -5,13 +5,14 @@
     margin: 0;
     scroll-behavior: smooth;
 }
+
 :root{
 --background-color: #12100E;
 --nav-color:#30321C;
 --heading-color: #6B654B;
 --hover-heading: #D4DF9E;
 --addition-color:#4A4B2F;
---main-transition:0.25s;
+--main-transition:0.1s;
 }
 .container{
     margin: 10px;
@@ -96,8 +97,10 @@ nav{
     align-items: center;
   }
   nav li{
-    height: 50px;
+    height: 57px;
+    margin: 10px 0;
   }
+  nav i{  font-size: 30px;}
   nav a{
     height: 100%;
     padding: 0 30px;
@@ -215,6 +218,27 @@ nav li:last-child{
  top: calc(-100px + 10%);
   }
 }
+.welcome img{
+  width: 200px;
+  border-radius:10px;
+
+}
+.welcome .image{
+  position: relative;
+  margin-bottom: 30px;
+}
+.welcome .image::before{
+  content: "";
+  position: absolute;
+  background-color: white;
+  top: 30px;
+  left: -30px;
+  width: 100%;
+  height: 100%;
+  z-index: -3; /* Ensure the pseudo-element is behind the image */
+  border-radius: 10px;
+}
+
 .welcome p{
   font-size: 30px;
   margin: 10px;
@@ -263,6 +287,22 @@ nav li:last-child{
 .welcome a:hover{
   color: rgb(55, 0, 255) ;
 }
+.welcome ul{
+  display: flex;
+  gap: 10px;
+  margin: 30px;
+}
+
+.welcome ul i{
+  font-size: 30px;
+  color: white;
+  transition: 0.5s;
+}
+ul i:hover{
+ color: var(--addition-color);
+ transform: rotate(360deg);
+
+}
 /* end welcome */
 /* start about  */
 .about p{
@@ -284,13 +324,20 @@ nav li:last-child{
   border-spacing: 0;
   overflow: hidden;
   background-color: #eee;
+  overflow: visible;
 }
+@media (max-width:780px) {
+  .skills table {
+    font-size: 14px;
+  }
+}
+
 
 .skills table th,
 .skills table td {
   text-align: center;
   padding: 15px;
-  border: 1px solid var(--background-color);
+  border: 1px solid white;
 }
 
 .skills table th {
@@ -304,18 +351,46 @@ nav li:last-child{
 }
 .skills table tr:not(:first-child):hover{
   background-color: #e9dead;
+  transform: scale(1.1);
+  border-radius: 10px;
+
 
 }
-
+.skills table tr td:first-of-type{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  border: none;
+}
+.skills table td img{
+  width: 60px;
+  margin: 5px;
+}
 /* end  skills */
 
 /* start certfications */
 button.show{
-  width: 150px;
-  padding: 10px;
+  width: 250px;
+  padding: 20px;
   display: block;
   margin: 20px auto;
   text-transform: capitalize;
+  background-color:rgb(84, 94, 75);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  height: 100px;
+  font-size: medium;
+  font-weight: bold;
+  transition: var(--main-transition);
+  text-align: center;
+}
+button.show i{
+  display: block;
+}
+button.show:hover{
+  background-color: rgb(111, 145, 82);
 }
 .certfications .cate {
   margin: 20px 10px;
@@ -333,24 +408,21 @@ button.show{
   justify-content: center;
   column-gap: 30px;
   row-gap: 30px;
+
 }
 .certfications .cate img{
   width: 400px;
   height: 250px;
   transition: var(--main-transition);
   border-radius: 4px;
+
 }
 .certfications .cate img:hover{
   transform: scale(1.1);
+
 }
  @media (max-width:710px) {
-  .certfications .cate .images{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+
 
   .certfications .cate img{
     width: 250px;
@@ -431,6 +503,7 @@ button.show{
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 8px 8px 24px rgba(0, 0, 0, .1);
+
 }
 .card-item .title{
   display: block;
@@ -438,23 +511,31 @@ button.show{
   padding: 5px;
   margin: 5px;
   border-bottom:1px var(--addition-color) solid;
+  font-size: large;
+  font-weight: bold;
+  color: rgb(48, 47, 47);
 }
 .card-item .description{
   color: rgb(47, 43, 43);
   padding: 5px;
   text-transform: capitalize;
   height: 150px;
+  line-height: 1.5;
+  overflow-y: auto;
   /* overflow-y: scroll; */
 }
 .card-item .cate{
   background-color: #7e8620;
-  width: 100px;
+  min-width: 100px;
   color: white;
   text-align: center;
-  padding: 5px;
+  padding: 10px;
   margin: 5px auto;
   border-radius: 10px;
-
+transition: var(--main-transition);
+}
+.card-item .cate:hover{
+  background-color: var(--addition-color);
 }
 .card-item a{
   text-decoration: none;
@@ -472,25 +553,55 @@ button.show{
 /* end projects */
 
 /* start services */
-.serv-warpper{
-  text-align: center;
+.serv-warpper {
+  display: grid;
+  gap: 30px 30px;
+grid-template-columns: repeat(auto-fill,minmax(400px, 1fr));
+  justify-items: center;
+  
 }
-.serv-warpper .serv{
-  margin-bottom: 20px;
+
+.serv-warpper .serv {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  background-color:#413c3c;
+  padding: 30px;
+  border-radius: 10px;
+
+  gap: 10px;
+
 }
-.serv-warpper .serv span{
-  margin-right: 10px;
+
+.serv-warpper .serv span {
+  display: block; 
+  margin-right: 10px auto;
   background-color: aqua;
   font-size: 30px;
   width: 50px;
   height: 50px;
   padding: 7px;
-  border-radius: 50%;
-  color: white;  
+  border-radius: 50%; 
+  text-align: center; 
+  line-height: 50px; 
 }
-.serv-warpper .serv p{
-  display: inline;
+.serv-warpper .serv p {
+
+  line-height: 2; /* Adjust line height as necessary */
+  margin: 0; /* Ensure no additional margins are applied */
+  display: block;
+  margin-top: 10px;
+
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+  text-align:left;
+
 }
+
+
 .acounts{
   display: block;
   width: fit-content;
@@ -510,16 +621,40 @@ button.show{
 }
 
 @media (max-width:800px) {
+  .serv-warpper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .serv-warpper .serv{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    background-color:#413c3c;
+    padding: 30px;
+    border-radius: 10px;
+    gap: 10px;
+  }
 
-  
   .serv-warpper .serv span{
     font-size: 20px;
+    margin: auto;
+ 
+   
   
   }
   
   .serv-warpper .serv p{
     display: block;
     margin-top: 10px;
+
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    text-align:left;
   }
 }
 
