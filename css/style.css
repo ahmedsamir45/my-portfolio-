@@ -88,6 +88,21 @@ nav{
     padding:0 10px ;
     z-index: 1000;
     backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: space-between;
+  }
+  nav .navbar{
+    width: fit-content;
+    margin-right: 60px;
+  }
+  nav .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+  }
+  nav .logo img{
+    width: 150px;
   }
   nav ul{
     width: 100%;
@@ -100,7 +115,12 @@ nav{
     height: 57px;
     margin: 10px 0;
   }
-  nav i{  font-size: 30px;}
+  nav i{ 
+    font-size: 30px;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+  }
   nav a{
     height: 100%;
     padding: 0 30px;
@@ -157,21 +177,36 @@ nav li:last-child{
     justify-content: center;
     align-items: center;
   }
+ 
+  .download i{
+    margin-right: 5px;
+    transition: var(--main-transition);
+  }
+
   .download:hover{
     background-color:rgb(62, 62, 202);
   }
-  @media (min-width: 920px) {
+  .download:hover i{
+    color:var(--addition-color) ;
+    scale: 1.3;
+  }
+  @media (min-width: 1135px) {
     .sidebar {
       display: none;
     }
+
   }
   
-  @media(max-width: 920px){
+  @media(max-width: 1135px){
     .hideOnMobile{
       display: none;
     }
     .menu-button{
       display: block;
+    }
+    nav .navbar{
+      width: fit-content;
+      margin-right: 10px;
     }
   }
   @media(max-width: 400px){
@@ -212,10 +247,10 @@ nav li:last-child{
     background-image: none;
     background-color: #30321C;
     width: 90%;
-  height: 90%;
-  border-radius: 20px;
- left: 5%;
- top: calc(-100px + 10%);
+    height: 90%;
+    border-radius: 20px;
+    left: 5%;
+    top: calc(-100px + 10%);
   }
 }
 .welcome img{
@@ -298,9 +333,10 @@ nav li:last-child{
   color: white;
   transition: 0.5s;
 }
-ul i:hover{
+.welcome ul i:hover{
  color: var(--addition-color);
- transform: rotate(360deg);
+ transform: rotate(360deg) scale(1.3);
+
 
 }
 /* end welcome */
@@ -385,6 +421,21 @@ button.show{
   font-weight: bold;
   transition: var(--main-transition);
   text-align: center;
+  animation: changeColor ease infinite;
+  animation-duration: 1s; /* Total duration for the animation */
+  animation-direction: alternate;
+  background-size: 400%;
+  background-image: linear-gradient(45deg,var(--addition-color),#30321C,var(--heading-color),var(--hover-heading));
+}
+@keyframes changeColor {
+  0% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
+    opacity: 0.9;
+  }
 }
 button.show i{
   display: block;
@@ -567,18 +618,18 @@ grid-template-columns: repeat(auto-fill,minmax(400px, 1fr));
   width: fit-content;
   align-items: center;
   justify-content: center;
-  background-color:#413c3c;
+  background-color:#eee;
   padding: 30px;
   border-radius: 10px;
-
+  color: var(--nav-color);
   gap: 10px;
-
+  transition: var(--main-transition);
 }
 
 .serv-warpper .serv span {
   display: block; 
   margin-right: 10px auto;
-  background-color: aqua;
+  background-color: var(--nav-color);
   font-size: 30px;
   width: 50px;
   height: 50px;
@@ -586,6 +637,13 @@ grid-template-columns: repeat(auto-fill,minmax(400px, 1fr));
   border-radius: 50%; 
   text-align: center; 
   line-height: 50px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.serv-warpper .serv:hover {
+  background-color: #e9dead;
 }
 .serv-warpper .serv p {
 
@@ -606,12 +664,15 @@ grid-template-columns: repeat(auto-fill,minmax(400px, 1fr));
   display: block;
   width: fit-content;
   margin: 20px auto;
+  width: 30%;
 }
 .acounts table{
   border-spacing: 8px;
   padding: 10px;
-  background-color: #ccc;
+  background-color: white;
   color: black;
+  width: 100%;
+  border-radius: 20px;
 }
 .acounts table a{
   text-decoration: none;
@@ -633,7 +694,7 @@ grid-template-columns: repeat(auto-fill,minmax(400px, 1fr));
     width: 80%;
     align-items: center;
     justify-content: center;
-    background-color:#413c3c;
+
     padding: 30px;
     border-radius: 10px;
     gap: 10px;
@@ -691,7 +752,7 @@ textarea{
   border: none;
 }
 #submit{
-  background-color:rgb(58, 249, 58);
+  background-color:var(--nav-color);
   color: white;
   padding: 10px;
   margin-top: 10px;
@@ -701,7 +762,7 @@ textarea{
   transition: var(--main-transition);
 }
 #submit:hover{
-  background-color: rgb(41, 201, 41);
+  background-color:#1e1f0c;
 }
 .contact .links{
   display: block;
@@ -730,16 +791,13 @@ footer{
 footer a i{
   font-size: 30px ;
   color:white ;
-  transition: 1s ;
   margin: 4px ;
 }
 footer div{
   margin: 5px auto;
   width: fit-content;
 }
-footer i:hover {
-  color: rgb(240, 164, 72);
-}
+
 footer span{
   display:block;
   width: fit-content;
