@@ -86,116 +86,86 @@ function mouseUpAndLeave() {
 
 // end image slider projects 
 
-function sendEmail(){
-  Email.send({
-      SecureToken : "04cb182d-52c7-4443-8204-b5216c1736d3",
-      To : "ahmedsamir3bas@gmail.com",
-      From : "ahmedsamir3bas@gmail.com",
-      Subject : "portfolio email",
-      Body : "name:  " + document.getElementById("name").value 
-          + "<br> Email:  " + document.getElementById("email").value
-          + "<br> message no:  " + document.getElementById("message").value
-  }).then(
-    message => alert("message sent succesfully")
-  );
-}
 
-// start certfication 
+// const urlPageTitle = "JS Single Page Application Router";
 
-// ai
-btnAI = document.querySelector(".show.ai");
-cateAI = document.querySelector(".images.ai");
+// // Define routes with paths to your templates
+// const urlRoutes = {
+//   404: {
+//     template: "templates/404.html", // Adjusted path
+//     title: "404 | " + urlPageTitle,
+//     description: "Page not found",
+//   },
+//   "/": {
+//     template: "templates/index.html",
+//     title: "Home | " + urlPageTitle,
+//     description: "This is the home page",
+//   },
+//   "/about": {
+//     template: "templates/about.html",
+//     title: "About Us | " + urlPageTitle,
+//     description: "This is the about page",
+//   },
+//   "/contact": {
+//     template: "templates/contact.html",
+//     title: "Contact Us | " + urlPageTitle,
+//     description: "This is the contact page",
+//   },
+//   "/certifications": {
+//     template: "templates/certifications.html",
+//     title: "Certifications | " + urlPageTitle,
+//     description: "This is the certifications page",
+//   },
+//   "/projects": {
+//     template: "templates/projects.html",
+//     title: "Projects | " + urlPageTitle,
+//     description: "This is the projects page",
+//   },
+// };
 
-btnAI.addEventListener("click", function() {
-  if (cateAI.classList.contains("showCertification")) {
-    cateAI.classList.remove("showCertification");
-    btnAI.innerHTML = "Show AI Certfications"+ ` <i class="fa-solid fa-caret-down"></i>`
-  } else {
-    cateAI.classList.add("showCertification");
-    btnAI.innerHTML = "Hide AI Certfications"+ ` <i class="fa-solid fa-caret-up"></i>`
-  }
-});
+// // Function to handle navigation
+// const urlRoute = (event) => {
+//   event = event || window.event;
+//   event.preventDefault();
+//   const targetLink = event.currentTarget.getAttribute("href");
+//   window.history.pushState({}, "", targetLink);
+//   urlLocationHandler();
+// };
 
-// front end
-btnfrontend = document.querySelector(".show.frontend");
-catefrontend = document.querySelector(".images.frontend");
+// // Function to handle URL location changes
+// const urlLocationHandler = async () => {
+//   let location = window.location.pathname;
+//   if (location.length === 0) location = "/";
 
-btnfrontend.addEventListener("click", function() {
-  if (catefrontend.classList.contains("showCertification")) {
-    catefrontend.classList.remove("showCertification");
-    btnfrontend.innerHTML = "Show Front End Certifications" + ` <i class="fa-solid fa-caret-down"></i>`;
-  } else {
-    catefrontend.classList.add("showCertification");
-    btnfrontend.innerHTML = "Hide Front End Certifications"+ ` <i class="fa-solid fa-caret-up"></i>`;
-  }
-});
+//   const route = urlRoutes[location] || urlRoutes["404"];
 
-// back end
-btnbackend = document.querySelector(".show.backend");
-catebackend = document.querySelector(".images.backend");
+//   try {
+//     const html = await fetch(route.template).then((response) => {
+//       if (!response.ok) throw new Error("Failed to load template");
+//       return response.text();
+//     });
 
-btnbackend.addEventListener("click", function() {
-  if (catebackend.classList.contains("showCertification")) {
-    catebackend.classList.remove("showCertification");
-    btnbackend.innerHTML = "Show back End Certifications" + ` <i class="fa-solid fa-caret-down"></i>`;
-  } else {
-    catebackend.classList.add("showCertification");
-    btnbackend.innerHTML = "Hide back End Certifications"+ ` <i class="fa-solid fa-caret-up"></i>`;
-  }
-});
+//     document.getElementById("content").innerHTML = html;
+//     document.title = route.title;
+//     document
+//       .querySelector('meta[name="description"]')
+//       .setAttribute("content", route.description);
+//   } catch (error) {
+//     console.error("Error loading page:", error);
+//     document.getElementById("content").innerHTML = "<h1>Error loading page</h1>";
+//   }
+// };
 
-//  cyber
-btncyber = document.querySelector(".show.cyber");
-catecyber = document.querySelector(".images.cyber");
+// // Event listener for navigation links
+// document.addEventListener("click", (e) => {
+//   const target = e.target.closest("nav a"); // Ensure it's a nav link
+//   if (!target) return;
+//   e.preventDefault();
+//   urlRoute(e);
+// });
 
-btncyber.addEventListener("click", function() {
-  if (catecyber.classList.contains("showCertification")) {
-    catecyber.classList.remove("showCertification");
-    btncyber.innerHTML = "Show cyber security Certifications" + ` <i class="fa-solid fa-caret-down"></i>`;
-  } else {
-    catecyber.classList.add("showCertification");
-    btncyber.innerHTML = "Hide cyber security Certifications"+ ` <i class="fa-solid fa-caret-up"></i>`;
-  }
-});
+// // Handle browser navigation (back/forward)
+// window.onpopstate = urlLocationHandler;
 
-// python
-btnpython = document.querySelector(".show.python");
-catepython = document.querySelector(".images.python");
-
-btnpython.addEventListener("click", function() {
-  if (catepython.classList.contains("showCertification")) {
-    catepython.classList.remove("showCertification");
-    btnpython.innerHTML = "Show python Certifications"+ ` <i class="fa-solid fa-caret-down"></i>`;
-  } else {
-    catepython.classList.add("showCertification");
-    btnpython.innerHTML = "Hide python Certifications"+ ` <i class="fa-solid fa-caret-up"></i>`;
-  }
-});
-
-// UI/UX
-btnux = document.querySelector(".show.ux");
-cateux = document.querySelector(".images.ux");
-
-btnux.addEventListener("click", function() {
-  if (cateux.classList.contains("showCertification")) {
-    cateux.classList.remove("showCertification");
-    btnux.innerHTML = "Show UI/UX Certifications" + ` <i class="fa-solid fa-caret-down"></i>`;
-  } else {
-    cateux.classList.add("showCertification");
-    btnux.innerHTML = "Hide UI/UX Certifications"+ ` <i class="fa-solid fa-caret-up"></i>`;
-  }
-});
-
-// others
-btnothers = document.querySelector(".show.others");
-cateothers = document.querySelector(".images.others");
-
-btnothers.addEventListener("click", function() {
-  if (cateothers.classList.contains("showCertification")) {
-    cateothers.classList.remove("showCertification");
-    btnothers.innerHTML = "Show other Certifications"+`<i class="fa-solid fa-caret-down"></i>`;
-  } else {
-    cateothers.classList.add("showCertification");
-    btnothers.innerHTML = "Hide other Certifications"+ `<i class="fa-solid fa-caret-up"></i>`;
-  }
-});
+// // Initial page load handling
+// urlLocationHandler();

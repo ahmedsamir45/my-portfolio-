@@ -1,0 +1,122 @@
+
+
+/* start projects */
+
+.wrapper {
+    position: relative;
+    /* max-width: 940px; */
+    width: 100%;
+  }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .5);
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+  .arrow:hover {
+    background-color: rgba(0, 0, 0, .7);
+  }
+  .arrow.prev {
+    left: 0;
+  
+  }
+  .arrow.next {
+    right: 0;
+  }
+  .card-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 280px;
+    overflow-x: auto;
+    padding: 24px;
+    gap: 24px;
+    cursor: grab;
+    scroll-snap-type: x;
+    scroll-padding-inline: 24px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  
+  }
+  .card-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  .card-wrapper.grab {
+    cursor: grabbing;
+    user-select: none;
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  
+  .card-info{
+    display: flex;
+    flex-direction: column;
+  }
+  .card-item{
+    background-color: white;
+    color: #12100E;
+    width: 270px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    scroll-snap-align: start;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 8px 8px 24px rgba(0, 0, 0, .1);
+  
+  }
+  .card-item .title{
+    display: block;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    border-bottom:1px var(--addition-color) solid;
+    font-size: large;
+    font-weight: bold;
+    color: rgb(48, 47, 47);
+  }
+  .card-item .description{
+    color: rgb(47, 43, 43);
+    padding: 5px;
+    text-transform: capitalize;
+    height: 150px;
+    line-height: 1.5;
+    overflow-y: auto;
+    /* overflow-y: scroll; */
+  }
+  .card-item .cate{
+    background-color: #7e8620;
+    min-width: 100px;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 5px auto;
+    border-radius: 10px;
+  transition: var(--main-transition);
+  }
+  .card-item .cate:hover{
+    background-color: var(--addition-color);
+  }
+  .card-item a{
+    text-decoration: none;
+    color: rgb(0, 115, 255);
+    cursor: pointer;
+    transition: var(--main-transition);
+    background-color: wheat;
+    padding: 10px;
+    width: fit-content;
+    margin: 10px auto;
+  }
+  .card-item a:hover{
+    color: rgb(55, 0, 255) ;
+  }
+  /* end projects */

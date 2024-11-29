@@ -1,0 +1,94 @@
+{
+    "certifications": [
+      {
+        "category": "python",
+
+        "images": [
+          "imgs/certfications/python/1.png",
+          "imgs/certfications/python/2.png",
+          "imgs/certfications/python/3.png"
+        ],
+        "alt":"python certfication"
+        
+      },
+      {
+        "category": "cyber",
+    
+        "images": [
+          "imgs/certfications/cyper securty/1.png",
+          "imgs/certfications/cyper securty/2.png",
+          "imgs/certfications/cyper securty/3.png",
+          "imgs/certfications/cyper securty/4.png",
+          "imgs/certfications/cyper securty/5.png",
+          "imgs/certfications/cyper securty/6.png",
+          "imgs/certfications/cyper securty/7.png",
+          "imgs/certfications/cyper securty/8.png",
+          "imgs/certfications/cyper securty/9.png"
+        ]
+      },
+      {
+        "category": "ai",
+  
+        "images": [
+          "imgs/certfications/AI/1.png",
+          "imgs/certfications/AI/2.png",
+          "imgs/certfications/AI/3.png",
+          "imgs/certfications/AI/4.png",
+          "imgs/certfications/AI/5.png",
+          "imgs/certfications/AI/6.png"
+        ]
+      },
+      {
+        "category": "frontend",
+  
+        "images": [
+          "imgs/certfications/HTML and CSS and JS/5.png",
+          "imgs/certfications/HTML and CSS and JS/1.png",
+          "imgs/certfications/HTML and CSS and JS/2.jpg",
+          "imgs/certfications/HTML and CSS and JS/3.jpg",
+          "imgs/certfications/HTML and CSS and JS/4.jpg",
+          "imgs/certfications/HTML and CSS and JS/6.png",
+          "imgs/certfications/HTML and CSS and JS/7.jpg"
+        ]
+      },
+      {
+        "category": "backend",
+
+        "images": [
+          "imgs/certfications/back end/1.png",
+          "imgs/certfications/back end/2.png",
+          "imgs/certfications/back end/3.png",
+          "imgs/certfications/back end/4.png",
+          "imgs/certfications/back end/5.png",
+          "imgs/certfications/back end/6.jpg"
+        ]
+      },
+      {
+        "category": "ux",
+
+        "images": [
+          "imgs/certfications/UI-UX/1.png",
+          "imgs/certfications/UI-UX/2.png"
+        ]
+      },
+      {
+        "category": "others",
+
+        "images": [
+          "imgs/certfications/others/5.png",
+          "imgs/certfications/others/1.png",
+          "imgs/certfications/others/7.png",
+          "imgs/certfications/others/2.png",
+          "imgs/certfications/others/3.png",
+          "imgs/certfications/soft skils/4.png",
+          "imgs/certfications/soft skils/1.png",
+          "imgs/certfications/soft skils/2.png",
+          "imgs/certfications/soft skils/3.png",
+          "imgs/certfications/soft skils/7.png",
+          "imgs/certfications/others/4.png",
+          "imgs/certfications/others/6.png"
+        ]
+      }
+    ]
+  }
+  

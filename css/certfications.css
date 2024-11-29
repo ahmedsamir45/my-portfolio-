@@ -1,0 +1,76 @@
+/* start certfications */
+button.show{
+    width: 250px;
+    padding: 20px;
+    display: block;
+    margin: 20px auto;
+    text-transform: capitalize;
+    background-color:rgb(84, 94, 75);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    height: 100px;
+    font-size: medium;
+    font-weight: bold;
+    transition: var(--main-transition);
+    text-align: center;
+    animation: changeColor ease infinite;
+    animation-duration: 1s; /* Total duration for the animation */
+    animation-direction: alternate;
+    background-size: 400%;
+    background-image: linear-gradient(45deg,var(--addition-color),#30321C,var(--heading-color),var(--hover-heading));
+  }
+  @keyframes changeColor {
+    0% {
+      background-position: left;
+    }
+  
+    100% {
+      background-position: right;
+      opacity: 0.9;
+    }
+  }
+  button.show i{
+    display: block;
+  }
+  button.show:hover{
+    background-color: rgb(111, 145, 82);
+  }
+  .certfications .cate {
+    margin: 20px 10px;
+    transition: 2s;
+  }
+  
+  .certfications .cate .images{
+  
+    display: none;
+    transition: max-height 0.5s ease-out;
+  }
+  .showCertification{
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 30px;
+    row-gap: 30px;
+  
+  }
+  .certfications .cate img{
+    width: 400px;
+    height: 250px;
+    transition: var(--main-transition);
+    border-radius: 4px;
+  
+  }
+  .certfications .cate img:hover{
+    transform: scale(1.1);
+  
+  }
+   @media (max-width:710px) {
+  
+  
+    .certfications .cate img{
+      width: 250px;
+      height: 150px;
+    }
+  }
+  /* end certfications  */
