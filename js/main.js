@@ -52,7 +52,7 @@ let initPos = 0
 let clicked = false
 
 var no_projects = [...document.querySelectorAll(".card-item")].length
-console.log(no_projects)
+
 
 arrowPrev.onclick = function() {
   cardWrapper.scrollLeft -= widthToScroll

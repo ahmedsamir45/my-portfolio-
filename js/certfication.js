@@ -1,10 +1,10 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     // Fetch the JSON data from the file
-    fetch('../data/data.json')
+    fetch('data.json')
       .then(response => response.json())
       .then(certificationsData => {
-        console.log(certificationsData); // Log the content to check its structure
+// Log the content to check its structure
         
         // Loop through each certification category
         certificationsData["certifications"].forEach(category => {
