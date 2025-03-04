@@ -22,7 +22,7 @@
 body{
     
     background-color: var(--background-color);
-    background: linear-gradient(to bottom,#342e04,#432604);
+    background: #342e04;
     font-family: sans-serif;
     min-height: 100vh;
     color: white;
@@ -76,7 +76,10 @@ body{
 ul{
   list-style:none;
 }
-
+a{
+  text-decoration: none;
+  color: rgb(0, 115, 255);
+}
 /* end global */
 
 

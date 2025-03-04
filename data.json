@@ -1,94 +1,275 @@
 {
-    "certifications": [
-      {
-        "category": "python",
-
-        "images": [
-          "imgs/certfications/python/1.png",
-          "imgs/certfications/python/2.png",
-          "imgs/certfications/python/3.png"
-        ],
-        "alt":"python certfication"
-        
-      },
-      {
-        "category": "cyber",
+  "certifications": [
+    {
+      "category": "AI",
+      "cert": [
+        {
+          "name": "AI Mahara Tech",
+          "url": "",
+          "img": "imgs/certfications/AI/ai mahara tech.png",
+          "alt": "AI Mahara Tech Certification"
+        },
+        {
+          "name": "Deep Learning Kaggle",
+          "url": "",
+          "img": "imgs/certfications/AI/deep learning kaggle.png",
+          "alt": "Deep Learning Kaggle Certification"
+        },
+        {
+          "name": "Machine Learning Kaggle",
+          "url": "",
+          "img": "imgs/certfications/AI/machine learning kaggle.png",
+          "alt": "Machine Learning Kaggle Certification"
+        }
+      ]
+    },
+    {
+      "category": "back-end",
+      "cert": [
+        {
+          "name": "Udemy Back End",
+          "url": "",
+          "img": "imgs/certfications/back end/back end udemy.jpg",
+          "alt": "Udemy Back End Certification"
+        },
+        {
+          "name": "Great Learning Flask",
+          "url": "",
+          "img": "imgs/certfications/back end/great learning flask.png",
+          "alt": "Great Learning Flask Certification"
+        },
+        {
+          "name": "Simple Learn Django",
+          "url": "",
+          "img": "imgs/certfications/back end/simple learn django.png",
+          "alt": "Simple Learn Django Certification"
+        }
+      ]
+    },
+    {
+      "category": "Cyber-Security",
+      "cert": [
+        {
+          "name": "CCNA Enterprise Networking",
+          "url": "",
+          "img": "imgs/certfications/cyber security/ccna enterprise networking.png",
+          "alt": "CCNA Enterprise Networking Certification"
+        },
+        {
+          "name": "CCNA Introduction to Network",
+          "url": "",
+          "img": "imgs/certfications/cyber security/ccna introduction to network.png",
+          "alt": "CCNA Introduction to Network Certification"
+        },
+        {
+          "name": "CCNA Switching and Routing",
+          "url": "",
+          "img": "imgs/certfications/cyber security/ccna switching and routing.png",
+          "alt": "CCNA Switching and Routing Certification"
+        },
+        {
+          "name": "Cloud Virtualization Concept",
+          "url": "",
+          "img": "imgs/certfications/cyber security/cloud virtulization concept.png",
+          "alt": "Cloud Virtualization Concept Certification"
+        },
+        {
+          "name": "Cyber Security Edrak",
+          "url": "",
+          "img": "imgs/certfications/cyber security/cyber edrak.png",
+          "alt": "Cyber Edrak Certification"
+        },
+        {
+          "name": "Cyber For All",
+          "url": "",
+          "img": "imgs/certfications/cyber security/cyber for all.png",
+          "alt": "Cyber For All Certification"
+        },
+        {
+          "name": "Cyber OBS",
+          "url": "",
+          "img": "imgs/certfications/cyber security/cyber obs.png",
+          "alt": "Cyber OBS Certification"
+        },
+        {
+          "name": "Ethical Hacking",
+          "url": "",
+          "img": "imgs/certfications/cyber security/ethical hacking.png",
+          "alt": "Ethical Hacking Certification"
+        },
+        {
+          "name": "ISC2",
+          "url": "",
+          "img": "imgs/certfications/cyber security/isc2.png",
+          "alt": "ISC2 Certification"
+        }
+      ]
+    },
+    {
+      "category": "Frontend",
+      "cert": [
+        {
+          "name": "HTML CSS Mahara Tech",
+          "url": "",
+          "img": "imgs/certfications/frontend/html css mahara tech.png",
+          "alt": "HTML CSS Mahara Tech Certification"
+        },
+        {
+          "name": "HTML SoloLearn",
+          "url": "",
+          "img": "imgs/certfications/frontend/html sololearn.png",
+          "alt": "HTML SoloLearn Certification"
+        },
+        {
+          "name": "Intro CSS SoloLearn",
+          "url": "",
+          "img": "imgs/certfications/frontend/intro css sololearn.jpg",
+          "alt": "Intro CSS SoloLearn Certification"
+        },
+        {
+          "name": "Intro JavaScript SoloLearn",
+          "url": "",
+          "img": "imgs/certfications/frontend/intro javascribt sololearn.jpg",
+          "alt": "Intro JavaScript SoloLearn Certification"
+        },
+        {
+          "name": "JavaScript SoloLearn",
+          "url": "",
+          "img": "imgs/certfications/frontend/javascribt sololearn.jpg",
+          "alt": "JavaScript SoloLearn Certification"
+        },
+        {
+          "name": "React Mahara Tech",
+          "url": "",
+          "img": "imgs/certfications/frontend/react mahara tech.jpg",
+          "alt": "React Mahara Tech Certification"
+        },
+        {
+          "name": "Responsive Web Design FreeCodeCamp",
+          "url": "",
+          "img": "imgs/certfications/frontend/responsive web desgin freecodecamp.png",
+          "alt": "Responsive Web Design FreeCodeCamp Certification"
+        }
+      ]
+    },
+    {
+      "category": "Python",
+      "cert": [
+        {
+          "name": "Data Analysis FreeCodeCamp",
+          "url": "",
+          "img": "imgs/certfications/python/python freecodecamp.png",
+          "alt": "Data Analysis FreeCodeCamp Certification"
+        },
+        {
+          "name": "Pandas Kaggle",
+          "url": "",
+          "img": "imgs/certfications/python/python kaggle.png",
+          "alt": "Pandas Kaggle Certification"
+        },
+        {
+          "name": "Simple Learn Data Analytics",
+          "url": "",
+          "img": "imgs/certfications/python/python mahar tech.png",
+          "alt": "Simple Learn Data Analytics Certification"
+        }
+      ]
+    },
+    {
+      "category": "ui-ux",
+      "cert": [
+        {
+          "name": "UX Edrak",
+          "url": "",
+          "img": "imgs/certfications/UI-UX/ux edrak.png",
+          "alt": "UX Edrak Certification"
+        },
+        {
+          "name": "UX Mahara",
+          "url": "",
+          "img": "imgs/certfications/UI-UX/ux mahara tech.png",
+          "alt": "UX Mahara Certification"
+        }
+      ]
+    },
+    {
+      "category": "others",
+      "cert": [
+        {
+          "name": "Change Management Edlal",
+          "url": "",
+          "img": "imgs/certfications/others/change management edlal.png",
+          "alt": "Change Management Edlal Certification"
+        },
+        {
+          "name": "Freelance Search Jobs",
+          "url": "",
+          "img": "imgs/certfications/others/freelance search jobs.png",
+          "alt": "Freelance Search Jobs Certification"
+        },
+        {
+          "name": "Job Search Career Development",
+          "url": "",
+          "img": "imgs/certfications/others/job search carear development.png",
+          "alt": "Job Search Career Development Certification"
+        },
+        {
+          "name": "Professional Certifications Edlal",
+          "url": "",
+          "img": "imgs/certfications/others/profitional certfications edlal.png",
+          "alt": "Professional Certifications Edlal Certification"
+        },
+        {
+          "name": "Search Jobs",
+          "url": "",
+          "img": "imgs/certfications/others/search jobs.png",
+          "alt": "Search Jobs Certification"
+        },
+        {
+          "name": "AI Tools Microsoft",
+          "url": "",
+          "img": "imgs/certfications/others/ai tools microsoft.png",
+          "alt": "AI Tools Microsoft Certification"
+        },
+        {
+          "name": "Blockchain Mahara Tech",
+          "url": "",
+          "img": "imgs/certfications/others/block chain mahara tech.png",
+          "alt": "Blockchain Mahara Tech Certification"
+        },
+        {
+          "name": "Chat GPT El Madrasa",
+          "url": "",
+          "img": "imgs/certfications/others/chat gpt el madrasa.png",
+          "alt": "Chat GPT El Madrasa Certification"
+        },
+        {
+          "name": "Chat GPT Udemy",
+          "url": "",
+          "img": "imgs/certfications/others/chat gpt udemy.png",
+          "alt": "Chat GPT Udemy Certification"
+        },
+        {
+          "name": "Clean Code Mahara Tech",
+          "url": "",
+          "img": "imgs/certfications/others/clean code mahara tech.png",
+          "alt": "Clean Code Mahara Tech Certification"
+        },
+        {
+          "name": "Edrak English",
+          "url": "",
+          "img": "imgs/certfications/others/edrak english.png",
+          "alt": "Edrak English Certification"
+        },
+        {
+          "name": "Git and GitHub",
+          "url": "",
+          "img": "imgs/certfications/others/git and git hub.png",
+          "alt": "Git and GitHub Certification"
+        }
+      ]
+    }
     
-        "images": [
-          "imgs/certfications/cyper securty/1.png",
-          "imgs/certfications/cyper securty/2.png",
-          "imgs/certfications/cyper securty/3.png",
-          "imgs/certfications/cyper securty/4.png",
-          "imgs/certfications/cyper securty/5.png",
-          "imgs/certfications/cyper securty/6.png",
-          "imgs/certfications/cyper securty/7.png",
-          "imgs/certfications/cyper securty/8.png",
-          "imgs/certfications/cyper securty/9.png"
-        ]
-      },
-      {
-        "category": "ai",
-  
-        "images": [
-          "imgs/certfications/AI/1.png",
-          "imgs/certfications/AI/2.png",
-          "imgs/certfications/AI/3.png",
-          "imgs/certfications/AI/4.png",
-          "imgs/certfications/AI/5.png",
-          "imgs/certfications/AI/6.png"
-        ]
-      },
-      {
-        "category": "frontend",
-  
-        "images": [
-          "imgs/certfications/HTML and CSS and JS/5.png",
-          "imgs/certfications/HTML and CSS and JS/1.png",
-          "imgs/certfications/HTML and CSS and JS/2.jpg",
-          "imgs/certfications/HTML and CSS and JS/3.jpg",
-          "imgs/certfications/HTML and CSS and JS/4.jpg",
-          "imgs/certfications/HTML and CSS and JS/6.png",
-          "imgs/certfications/HTML and CSS and JS/7.jpg"
-        ]
-      },
-      {
-        "category": "backend",
-
-        "images": [
-          "imgs/certfications/back end/1.png",
-          "imgs/certfications/back end/2.png",
-          "imgs/certfications/back end/3.png",
-          "imgs/certfications/back end/4.png",
-          "imgs/certfications/back end/5.png",
-          "imgs/certfications/back end/6.jpg"
-        ]
-      },
-      {
-        "category": "ux",
-
-        "images": [
-          "imgs/certfications/UI-UX/1.png",
-          "imgs/certfications/UI-UX/2.png"
-        ]
-      },
-      {
-        "category": "others",
-
-        "images": [
-          "imgs/certfications/others/5.png",
-          "imgs/certfications/others/1.png",
-          "imgs/certfications/others/7.png",
-          "imgs/certfications/others/2.png",
-          "imgs/certfications/others/3.png",
-          "imgs/certfications/soft skils/4.png",
-          "imgs/certfications/soft skils/1.png",
-          "imgs/certfications/soft skils/2.png",
-          "imgs/certfications/soft skils/3.png",
-          "imgs/certfications/soft skils/7.png",
-          "imgs/certfications/others/4.png",
-          "imgs/certfications/others/6.png"
-        ]
-      }
-    ]
-  }
-  
+    
+  ]
+}

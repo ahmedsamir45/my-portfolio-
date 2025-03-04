@@ -20,6 +20,11 @@
     color: var(--nav-color);
     gap: 10px;
     transition: var(--main-transition);
+    box-shadow: rgba(1, 62, 70, 0.4) 0px 5px,
+    rgba(2, 45, 51, 0.4) 0px 10px,
+    rgba(2, 29, 33, 0.4)0px 15px,
+    rgba(1, 31, 34, 0.4) 0px 20px,
+    rgba(240, 46, 170, 0.05) 0px 25px;
   }
   
   .serv-warpper .serv span {
@@ -40,7 +45,7 @@
   }
   .serv-warpper .serv:hover {
     background-color: #e9dead;
-    scale: 1.1;
+    scale: 1.05;
   }
   .serv-warpper .serv p {
   
@@ -58,26 +63,25 @@
   
   
   .acounts{
-    display: block;
-    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     margin: 20px auto;
-   
+    gap: 8px;
+  
   }
-  .acounts table{
-    border-spacing: 8px;
+  .acounts .acount{
+    background-color: #eee;
     padding: 10px;
-    background-color: white;
-    color: black;
-    width: 100%;
-    border-radius: 20px;
-  }
-  .acounts table a{
-    text-decoration: none;
-    color: rgb(0, 115, 255);
-    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 7px 7px var(--heading-color);
     transition: var(--main-transition);
   }
-  
+  .acounts .acount:hover{
+    box-shadow: 0 0;
+    
+  }
   @media (max-width:800px) {
     .serv-warpper{
       display: flex;
@@ -95,6 +99,7 @@
       padding: 30px;
       border-radius: 10px;
       gap: 10px;
+
     }
   
     .serv-warpper .serv span{
@@ -125,23 +130,31 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #242002;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 70%;
+    box-shadow: rgba(120, 120, 120, 0.07) 0px 1px 1px, rgba(146, 146, 146, 0.07) 0px 2px 2px, rgba(251, 251, 251, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(180, 179, 179, 0.07) 0px 16px 16px;
   }
   .contact input,textarea{
     display: block;
     width: 80%;
     margin: 20px auto;
+    background-color: #342e04;
   }
-  .contact input,textarea:focus{
+  .contact input,textarea{
     border: none;
-    outline: #6B654B;
+    outline: none;
+
   }
   .contact input{
     padding: 10px;
     border: none;
-    border-bottom: 1px solid #ccc;
-    background-color: #f0f0f0;
+
+  
     border-radius: 30px;
-    background-color: rgba(0, 0, 0, 0.319);
+
     color: white;
   }
   textarea{
@@ -149,8 +162,8 @@
     padding: 10px;
     border-radius: 25px;
     border: none;
-    background-color: rgba(0, 0, 0, 0.319);
-    border-bottom: 1px solid #ccc;
+
+
     color: white;
   }
   #submit{
@@ -159,28 +172,15 @@
     padding: 10px;
     margin-top: 10px;
     border: none;
-    border-radius: 30px;
+    border-radius:10px;
     font-size: 20px;
     transition: var(--main-transition);
   }
   #submit:hover{
-    background-color:#1e1f0c;
+  
+    border-radius: 30px;
   }
-  .contact .links{
-    display: block;
-    width: fit-content;
-    padding: 10px;
-    margin: 10px auto;
-    background-color:#f9d63e;
-    border-radius: 20px;
-    color: black;
-  }
-  .contact .links a{
-    text-decoration: none;
-    color: rgb(0, 115, 255);
-    cursor: pointer;
-    transition: var(--main-transition);
-  }
+
   /* end contact us */
   
   /* start footer */

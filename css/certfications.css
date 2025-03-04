@@ -1,76 +1,113 @@
 /* start certfications */
-button.show{
-    width: 250px;
-    padding: 20px;
-    display: block;
-    margin: 20px auto;
-    text-transform: capitalize;
-    background-color:rgb(84, 94, 75);
-    color: white;
-    border: none;
-    border-radius: 50px;
-    height: 100px;
-    font-size: medium;
-    font-weight: bold;
-    transition: var(--main-transition);
-    text-align: center;
-    animation: changeColor ease infinite;
-    animation-duration: 1s; /* Total duration for the animation */
-    animation-direction: alternate;
-    background-size: 400%;
-    background-image: linear-gradient(45deg,var(--addition-color),#30321C,var(--heading-color),var(--hover-heading));
+/* Start certifications */
+
+
+.certfications .cate {
+  margin: 20px 10px;
+}
+
+.certfications .cate .images {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  transition: max-height 0.5s ease-out;
+}
+
+.showCertification {
+  display: flex !important;
+}
+
+.certfications .cate .card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
+  text-align: center;
+}
+
+.certfications .cate .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.certfications .cate .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.certfications .cate .card h4 {
+  margin: 15px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.certfications .cate .card button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: var(--addition-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.certfications .cate .card button:hover {
+  background-color: var(--hover-heading);
+}
+
+button.show {
+  width: 250px;
+  padding: 20px;
+  display: block;
+  margin: 20px auto;
+  text-transform: capitalize;
+  background-color: rgb(84, 94, 75);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  height: 100px;
+  font-size: medium;
+  font-weight: bold;
+  transition: var(--main-transition);
+  text-align: center;
+  animation: changeColor ease infinite;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  background-size: 400%;
+  background-image: linear-gradient(45deg, var(--addition-color), #30321C, var(--heading-color), var(--hover-heading));
+}
+
+button.show i {
+  display: block;
+}
+
+button.show:hover {
+  background-color: rgb(111, 145, 82);
+}
+
+@keyframes changeColor {
+  0% {
+    background-position: left;
   }
-  @keyframes changeColor {
-    0% {
-      background-position: left;
-    }
-  
-    100% {
-      background-position: right;
-      opacity: 0.9;
-    }
+
+  100% {
+    background-position: right;
+    opacity: 0.9;
   }
-  button.show i{
-    display: block;
+}
+
+@media (max-width: 710px) {
+  .certfications .cate .card {
+    width: 100%;
   }
-  button.show:hover{
-    background-color: rgb(111, 145, 82);
+
+  .certfications .cate .card img {
+    height: 150px;
   }
-  .certfications .cate {
-    margin: 20px 10px;
-    transition: 2s;
-  }
-  
-  .certfications .cate .images{
-  
-    display: none;
-    transition: max-height 0.5s ease-out;
-  }
-  .showCertification{
-    display: flex !important;
-    flex-wrap: wrap;
-    justify-content: center;
-    column-gap: 30px;
-    row-gap: 30px;
-  
-  }
-  .certfications .cate img{
-    width: 400px;
-    height: 250px;
-    transition: var(--main-transition);
-    border-radius: 4px;
-  
-  }
-  .certfications .cate img:hover{
-    transform: scale(1.1);
-  
-  }
-   @media (max-width:710px) {
-  
-  
-    .certfications .cate img{
-      width: 250px;
-      height: 150px;
-    }
-  }
-  /* end certfications  */
+}
+/* End certifications */

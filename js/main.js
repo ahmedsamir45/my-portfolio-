@@ -1,42 +1,37 @@
-// start navbar 
-nav = document.getElementsByTagName("nav")
-function showSidebar(){
-    const sidebar = document.querySelector('.sidebar')
-    sidebar.style.display = "flex"
-    // sidebar.classList.add("activesidebar")
-  }
-  function hideSidebar(){
-    const sidebar = document.querySelector('.sidebar')
-        sidebar.style.display = "none"
-    // sidebar.classList.remove("activesidebar")
-  }
-links = document.querySelectorAll(".sidebar  li a")
+// Start navbar
+function showSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.classList.add('active'); // Add active class to slide in
+}
 
+function hideSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.classList.remove('active'); // Remove active class to slide out
+}
+
+// Close sidebar when a link is clicked
+const links = document.querySelectorAll('.sidebar li a');
 links.forEach((link) => {
-  link.addEventListener("click", () => {
-    hideSidebar()
-  })
-})
-// start media query 
+  link.addEventListener('click', () => {
+      hideSidebar();
+  });
+});
+
+// Close sidebar when the screen is resized to desktop size
 function handleMediaQuery(mediaQuery) {
   const sidebar = document.querySelector('.sidebar');
   if (mediaQuery.matches) {
-    // If the media query matches (viewport width is at least 920px), hide the sidebar
-    sidebar.style.display = 'none';
+      hideSidebar(); // Hide sidebar on larger screens
   }
 }
 
 // Define the media query
-const mediaQuery = window.matchMedia('(min-width: 920px)');
-
-
+const mediaQuery = window.matchMedia('(min-width: 1135px)');
 
 // Listen for changes in the media query
 mediaQuery.addListener(handleMediaQuery);
-// end of media query
 
-
-// end navbar
+// End navbar
 
 
 // start image slider projects 

@@ -1,111 +1,130 @@
-/* start navbar  */
-nav{
-    background-color: var(--nav-color);
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    padding:0 10px ;
-    z-index: 1000;
-    backdrop-filter: blur(12px);
-    display: flex;
-    justify-content: space-between;
-  }
-  nav .navbar{
-    width: fit-content;
-    margin-right: 60px;
-  }
-  nav .logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-  }
-  nav .logo img{
-    width: 130px;
-  }
-  nav ul{
-    width: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  nav li{
-    height: 57px;
- 
-  }
+/* Start navbar */
+nav {
+  background-color: var(--nav-color);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: calc(100% - 20px); /* Adjust width to account for margin */
+  top: 0;
+  left: 10px; /* Align to the left with a 10px offset */
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  border-radius: 25px;
+  margin: 10px 10px 10px 0; /* Adjust margin to prevent shifting */
+}
 
-  nav a{
-    height: 100%;
-    padding: 0 30px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: white;
-    transition: var(--main-transition);
-  }
-  nav a:hover{
-    background-color: var(--addition-color);
-  }
-  nav li:last-child{
-    margin-left: auto;
-  }
+nav .navbar {
+  width: 100%; /* Make navbar take full width */
+  max-width: 1200px; /* Optional: Set a max-width for larger screens */
+  margin-right: 60px;
+  display: flex;
+  justify-content: space-between; /* Space out logo and links */
+  align-items: center;
+}
 
-  .sidebar{
-    position: fixed;
-    top: 0; 
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(12px);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    list-style: none;
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    background-color: var(--nav-color);
-  }
+nav .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
 
-  .activesidebar{
-    display: flex;
-  }
-  .sidebar li{
-    width: 100%;
-  }
-  .sidebar a{
-    width: 100%;
-  }
-  .menu-button{
-    display: none;
-  }
+nav .logo img {
+  width: 130px;
+}
 
- 
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
 
-  @media (min-width: 1135px) {
-    .sidebar {
+nav li {
+  height: 57px;
+
+}
+
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  transition: var(--main-transition);
+  border-radius: 50px;
+}
+
+nav a:hover {
+  background-color: var(--addition-color);
+}
+
+/* Move the burger icon to the right */
+nav .menu-button {
+  margin-left: auto; /* Push the burger icon to the right */
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -261px; /* Start off-screen */
+  height: 100vh;
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: var(--nav-color);
+  transition: right 0.3s ease-in-out; /* Add animation */
+  z-index: 1001; /* Ensure it appears above other content */
+}
+
+.sidebar.active {
+  right: 0; /* Slide in */
+}
+
+.sidebar li {
+  width: 100%;
+
+}
+
+.sidebar a {
+  width: 100%;
+}
+
+.menu-button {
+  display: none;
+}
+
+@media (max-width: 1135px) {
+  .hideOnMobile {
       display: none;
-    }
-
   }
-  
-  @media(max-width: 1135px){
-    .hideOnMobile{
-      display: none;
-    }
-    .menu-button{
+
+  .menu-button {
       display: block;
-    }
-    nav .navbar{
-      width: fit-content;
+  }
+
+  nav .navbar {
       margin-right: 10px;
-    }
   }
-  @media(max-width: 400px){
-    .sidebar{
+}
+
+@media (max-width: 400px) {
+  .sidebar {
       width: 100%;
-    }
+      right: -100%; /* Start off-screen for mobile */
   }
-/* start navbar  */
+
+  .sidebar.active {
+      right: 0; /* Slide in for mobile */
+  }
+}
+/* End navbar */
