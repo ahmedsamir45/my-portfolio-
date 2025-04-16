@@ -163,7 +163,7 @@
     border-radius: 25px;
     border: none;
 
-
+    resize: none;
     color: white;
   }
   #submit{

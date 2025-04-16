@@ -10,6 +10,7 @@ nav {
   backdrop-filter: blur(12px);
   display: flex;
   justify-content: center;
+  align-items: center;
   border-radius: 25px;
   margin: 10px 10px 10px 0; /* Adjust margin to prevent shifting */
 }
@@ -17,9 +18,9 @@ nav {
 nav .navbar {
   width: 100%; /* Make navbar take full width */
   max-width: 1200px; /* Optional: Set a max-width for larger screens */
-  margin-right: 60px;
+
   display: flex;
-  justify-content: space-between; /* Space out logo and links */
+  justify-content: center; /* Space out logo and links */
   align-items: center;
 }
 
@@ -119,8 +120,8 @@ nav .menu-button {
 
 @media (max-width: 400px) {
   .sidebar {
-      width: 100%;
-      right: -100%; /* Start off-screen for mobile */
+      width: 90%;
+      right: -110%; /* Start off-screen for mobile */
   }
 
   .sidebar.active {

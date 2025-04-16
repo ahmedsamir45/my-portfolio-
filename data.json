@@ -1,10 +1,11 @@
 {
   "certifications": [
     {
-      "category": "AI",
+      "category": "AI & Data Science",
+      "shortcut":"ai",
       "cert": [
         {
-          "name": "AI Mahara Tech",
+          "name": "AI For Everyone",
           "url": "",
           "img": "imgs/certfications/AI/ai mahara tech.png",
           "alt": "AI Mahara Tech Certification"
@@ -21,14 +22,43 @@
           "img": "imgs/certfications/AI/machine learning kaggle.png",
           "alt": "Machine Learning Kaggle Certification"
         }
+        ,
+        {
+          "name": "Data Analysis Freecodecamp",
+          "url": "",
+          "img": "imgs/certfications/AI/data analysis freecodecamp.png",
+          "alt": "data analyisis freecodecamp Certification"
+        }
+        ,
+        {
+          "name": "Pandas Kaggle",
+          "url": "",
+          "img": "imgs/certfications/AI/pandas kaggle.png",
+          "alt": "Pandas  Kaggle Certification"
+        }
+        ,
+        {
+          "name": "Data Analytics Simple Learn ",
+          "url": "",
+          "img": "imgs/certfications/AI/simple learn data analytics.png",
+          "alt": "Data Analytics Kaggle Certification"
+        }
+        ,
+        {
+          "name": "Machine Learning Freecodecamp ",
+          "url": "https://github.com/ahmedsamir45/FreeCodeCamp_machineLearning_projects",
+          "img": "imgs/certfications/AI/machine learning freecodecamp.png",
+          "alt": "machine learning freecodecamp"
+        }
       ]
     },
     {
-      "category": "back-end",
+      "category": "Backend & Databases",
+      "shortcut":"back",
       "cert": [
         {
-          "name": "Udemy Back End",
-          "url": "",
+          "name": "Python Web Dev Pro",
+          "url": "https://www.udemy.com/certificate/UC-c36278c7-b476-4e2c-b331-1c2aa05c2f7f/",
           "img": "imgs/certfications/back end/back end udemy.jpg",
           "alt": "Udemy Back End Certification"
         },
@@ -39,15 +69,34 @@
           "alt": "Great Learning Flask Certification"
         },
         {
-          "name": "Simple Learn Django",
+          "name": "Database Fundamental",
+          "url": "",
+          "img": "imgs/certfications/back end/database fundamental.png",
+          "alt": "database fundamental sql"
+        },
+        {
+          "name": "MongoDB",
+          "url": "",
+          "img": "imgs/certfications/back end/mongo db.png",
+          "alt": "Mongo DB mahara Tech"
+        },
+        {
+          "name": "Django Simple Learn",
           "url": "",
           "img": "imgs/certfications/back end/simple learn django.png",
           "alt": "Simple Learn Django Certification"
+        },
+        {
+          "name": "Data Programing Sololearn",
+          "url": "",
+          "img": "imgs/certfications/back end/data programing solo learn.png",
+          "alt": "python and sql sololearn"
         }
       ]
     },
     {
-      "category": "Cyber-Security",
+      "category": "Cyber Security",
+      "shortcut":"cyber",
       "cert": [
         {
           "name": "CCNA Enterprise Networking",
@@ -107,6 +156,7 @@
     },
     {
       "category": "Frontend",
+      "shortcut":"front",
       "cert": [
         {
           "name": "HTML CSS Mahara Tech",
@@ -154,29 +204,31 @@
     },
     {
       "category": "Python",
+      "shortcut": "python",
       "cert": [
         {
-          "name": "Data Analysis FreeCodeCamp",
+          "name": "Scientific Computing with Python",
           "url": "",
           "img": "imgs/certfications/python/python freecodecamp.png",
           "alt": "Data Analysis FreeCodeCamp Certification"
         },
         {
-          "name": "Pandas Kaggle",
+          "name": "Python Kaggle",
           "url": "",
           "img": "imgs/certfications/python/python kaggle.png",
           "alt": "Pandas Kaggle Certification"
         },
         {
-          "name": "Simple Learn Data Analytics",
+          "name": "Python Mahara Tech",
           "url": "",
           "img": "imgs/certfications/python/python mahar tech.png",
-          "alt": "Simple Learn Data Analytics Certification"
+          "alt": "python Mahara Tech certfication"
         }
       ]
     },
     {
-      "category": "ui-ux",
+      "category": "UI / UX",
+      "shortcut":"ui",
       "cert": [
         {
           "name": "UX Edrak",
@@ -193,7 +245,8 @@
       ]
     },
     {
-      "category": "others",
+      "category": "Others",
+      "shortcut":"others",
       "cert": [
         {
           "name": "Change Management Edlal",
@@ -271,5 +324,222 @@
     }
     
     
-  ]
-}
+  ],
+ "projects": [
+    {
+      "title": "Tytopya",
+      "description": "Text summarization project and chatbot development includes login, database management (ORM), error handling, and admin page.",
+      "category": "ai",
+      "image": "images/tytopya.jpg",
+      "tech": ["Flask", "Bootstrap", "TensorFlow", "Torch", "T5"],
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/ahmedsamir45/tytopya"
+        },
+        {
+          "type": "demo",
+          "url": "https://youtu.be/JkoaM9AqO2o",
+          "icon": "fa-solid fa-video"
+        }
+      ]
+    },
+    {
+      "title": "Contacts List",
+      "description": "Full stack project using React and Flask with REST API.",
+      "category": "fullstack",
+      "image": "images/contacts-list.jpg",
+      "tech": ["React", "Flask", "REST API"],
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/ahmedsamir45/contacts-list"
+        },
+        {
+          "type": "demo",
+          "url": "https://youtu.be/-yztVwBLu9s",
+          "icon": "fa-solid fa-video"
+        }
+      ]
+    },
+    {
+      "title": "House Price Prediction",
+      "description": "Predict house prices using pandas, numpy and RandomForestRegressor.",
+      "category": "ai",
+      "image": "images/house-price.jpg",
+      "tech": ["Python", "Pandas", "Scikit-learn"],
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/ahmedsamir45/house-price"
+        }
+      ]
+    },
+    {
+      "title": "Order Management System",
+      "description": "A Flask-based e-commerce application with product browsing, admin interface, and order management.",
+      "category": "backend",
+      "image": "images/order-system.jpg",
+      "tech": ["Flask", "SQLAlchemy", "Bootstrap", "HTML", "CSS"],
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/ahmedsamir45/order-system"
+        },
+        {
+          "type": "demo",
+          "url": "https://youtu.be/EufpZDcrhhc",
+          "icon": "fa-solid fa-video"
+        }
+      ]
+    },
+    {
+      "title": "Skill App",
+      "description": "A web application including CRUD system, database management using SQLAlchemy (ORM), error handling pages, and admin page.",
+      "category": "fullstack",
+      "image": "images/skill-app.jpg",
+      "tech": ["Flask", "SQLAlchemy", "HTML", "CSS", "Bootstrap"],
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/ahmedsamir45/Skill_app_flask"
+        }
+      ]
+    },
+    {
+      "title": "Social Media App",
+      "description": "A social media application using Django REST framework and JWT for authentication.",
+      "category": "backend",
+      "image": "images/social-media-app.jpg",
+      "tech": ["Django", "Django REST Framework", "JWT", "CSS"],
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/ahmedsamir45/social_media_app"
+        }
+      ]
+    },
+    {
+      "title": "E-Commerce Chart",
+      "description": "E-commerce chart using vanilla JavaScript and local storage.",
+      "category": "frontend",
+      "image": "images/e-commerce.jpg",
+      "tech": ["JavaScript", "HTML", "CSS"],
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/ahmedsamir45/e-commerce"
+        }
+      ]
+    },
+    {
+      "title": "UR Store",
+      "description": "Final front-end project with React in ITI.",
+      "category": "frontend",
+      "image": "images/ur-store.jpg",
+      "tech": ["React", "JavaScript", "HTML", "CSS"],
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/ahmedsamir45/UR_Store"
+        }
+      ]
+    },
+    {
+      "title": "Notes Flask",
+      "description": "A simple web app to login, register, logout, and manage notes.",
+      "category": "backend",
+      "image": "images/notes-flask.jpg",
+      "tech": ["Flask", "SQLAlchemy", "Login Manager"],
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/ahmedsamir45/Notes_flask"
+        }
+      ]
+    },
+    {
+      "title": "Product Landing Page",
+      "description": "Phone store landing page built with HTML and CSS.",
+      "category": "frontend",
+      "image": "images/product-landing-page.jpg",
+      "tech": ["HTML", "CSS"],
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/ahmedsamir45/product-landing-page"
+        }
+      ]
+    },
+    {
+      "title": "Image Editor",
+      "description": "Image filter editor using JavaScript.",
+      "category": "frontend",
+      "image": "images/image-editor.jpg",
+      "tech": ["JavaScript", "HTML", "CSS"],
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/ahmedsamir45/Image-editor"
+        }
+      ]
+    },
+    {
+      "title": "FreeCodeCamp Machine Learning Projects",
+      "description": "A collection of 5 machine learning projects built as part of the freeCodeCamp assignment.",
+      "category": "ai",
+      "image": "images/freecodecamp-ml.jpg",
+      "tech": ["Python", "Machine Learning", "Deep Learning"],
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/ahmedsamir45/freecodecamp_machinelearning_projects"
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "all",
+      "name": "All Projects",
+      "icon": "fa-layer-group"
+    },
+    {
+      "id": "backend",
+      "name": "Backend & DB",
+      "icon": "fa-server"
+    },
+    {
+      "id": "frontend",
+      "name": "Frontend & JS",
+      "icon": "fa-code"
+    },
+    {
+      "id": "fullstack",
+      "name": "Full Stack",
+      "icon": "fa-cubes"
+    },
+    
+     
+      {
+        "id": "ai",
+        "name": "AI & Data",
+        "icon": "fa-brain"
+      }
+    ],
+    "styles": {
+      "colors": {
+        "background": "#12100E",
+        "nav": "#30321C",
+        "heading": "#6B654B",
+        "hover": "#D4DF9E",
+        "accent": "#4A4B2F"
+      },
+      "animations": {
+        "cardEntry": "fadeInUp 0.6s ease forwards",
+        "hoverEffect": "transform 0.3s ease, box-shadow 0.3s ease"
+      }
+    }
+  }
+  
+
