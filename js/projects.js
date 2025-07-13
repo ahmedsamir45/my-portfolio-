@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Generate tech badges HTML
     const techHTML = project.tech.map(tech => 
       `<span class="tech-badge">${tech}</span>`
-    ).join('');
+    ).join(', ');
     
     card.innerHTML = `
       <div class="project-img-container">

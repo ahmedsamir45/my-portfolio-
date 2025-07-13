@@ -325,12 +325,12 @@
     
     
   ],
- "projects": [
+  "projects": [
     {
       "title": "Tytopya",
       "description": "Text summarization project and chatbot development includes login, database management (ORM), error handling, and admin page.",
       "category": "fullstack",
-      "image": "images/tytopya.jpg",
+      "image": "imgs/projects/full/tytopya.png",
       "tech": ["Flask", "Bootstrap", "TensorFlow", "SQLAlchemy", "T5"],
       "links": [
         {
@@ -348,7 +348,7 @@
       "title": "Contacts List",
       "description": "Full stack project using React and Flask with REST API.",
       "category": "fullstack",
-      "image": "images/contacts-list.jpg",
+      "image": "imgs/projects/full/contact.png",
       "tech": ["React", "Flask", "REST API"],
       "links": [
         {
@@ -366,12 +366,12 @@
       "title": "House Price Prediction",
       "description": "Predict house prices using pandas, numpy and RandomForestRegressor.",
       "category": "ai",
-      "image": "images/house-price.jpg",
+      "image": "imgs/projects/ai/house pricing.png",
       "tech": ["Python", "Pandas", "Scikit-learn"],
       "links": [
         {
           "type": "github",
-          "url": "https://github.com/ahmedsamir45/house-price"
+          "url": "https://www.kaggle.com/code/ahmedsamir6788/notebook782879d008"
         }
       ]
     },
@@ -379,7 +379,7 @@
       "title": "NLP Projects",
       "description": " explore core concepts and practical implementations in natural language processing. Each folder covers a specific topic with code and, where applicable, sample data or results.",
       "category": "ai",
-      "image": "images/house-price.jpg",
+      "image": "imgs/projects/ai/nlp projects.png",
       "tech": ["transformers", "T5", "nltk","spacy"],
       "links": [
         {
@@ -392,7 +392,7 @@
       "title": "Big Mac Index",
       "description": " A web-based visualization tool for The Economist's Big Mac Index, showing global price comparisons and purchasing power parity.",
       "category": "ai",
-      "image": "images/house-price.jpg",
+      "image": "imgs/projects/ai/big mac.png",
       "tech": ["Flask", "Pandas", "matplotlib","sympy","ajax","Canvas"],
       "links": [
         {
@@ -409,7 +409,7 @@
       "title": "ODE Solver",
       "description": " A web application for solving Ordinary Differential Equations (ODEs) using numerical methods, built with Python and Flask.",
       "category": "ai",
-      "image": "images/house-price.jpg",
+      "image": "imgs/projects/ai/ode solver.png",
       "tech": ["Flask", "Pandas", "matplotlib","sympy","Regex"],
       "links": [
         {
@@ -426,7 +426,7 @@
       "title": "Order Management System",
       "description": "A Flask-based e-commerce application with product browsing, admin interface, and order management.",
       "category": "backend",
-      "image": "images/order-system.jpg",
+      "image": "imgs/projects/full/order system.png",
       "tech": ["Flask", "SQLAlchemy", "Bootstrap", "HTML", "CSS"],
       "links": [
         {
@@ -444,7 +444,7 @@
       "title": " BIg Skills",
       "description": "Web app for skill management and job applications.",
       "category": "fullstack",
-      "image": "images/skill-app.jpg",
+      "image": "imgs/projects/full/bigskils.png",
       "tech": ["Flask", "SQLAlchemy", "HTML", "CSS", "Bootstrap"],
       "links": [
         {
@@ -457,7 +457,7 @@
       "title": "Social Media App",
       "description": "A social media application using Django REST framework and JWT for authentication.",
       "category": "fullstack",
-      "image": "images/social-media-app.jpg",
+      "image": "imgs/projects/full/ur social media app.png",
       "tech": ["Django", "Django REST Framework", "CSS"],
       "links": [
         {
@@ -470,7 +470,7 @@
       "title": "E-Commerce Chart",
       "description": "E-commerce chart using vanilla JavaScript and local storage.",
       "category": "frontend",
-      "image": "images/e-commerce.jpg",
+      "image": "imgs/projects/frontend/ecommerce chart.png",
       "tech": ["JavaScript", "HTML", "CSS"],
       "links": [
         {
@@ -488,7 +488,7 @@
       "title": "UR Store",
       "description": "Final front-end project with React in ITI.",
       "category": "frontend",
-      "image": "images/ur-store.jpg",
+      "image": "imgs/projects/frontend/ur store.png",
       "tech": ["React", "Bootstrap", "CSS"],
       "links": [
         {
@@ -506,7 +506,7 @@
       "title": "Notes App",
       "description": "A simple web app to login, register, logout, and manage notes.",
       "category": "backend",
-      "image": "images/notes-flask.jpg",
+      "image": "imgs/projects/backend/Misr International Clinic Database.png",
       "tech": ["Flask", "SQLAlchemy", "Login Manager"],
       "links": [
         {
@@ -519,7 +519,7 @@
       "title": "Video API",
       "description": "This RESTful API allows users to create, retrieve, update, and delete video entries.",
       "category": "backend",
-      "image": "images/notes-flask.jpg",
+      "image": "imgs/projects/backend/video api.png",
       "tech": ["Flask", "SQLAlchemy", "flask_restful"],
       "links": [
         {
@@ -532,12 +532,12 @@
       "title": "Blog Post API",
       "description": "This RESTful API allows users to create, retrieve, update, and delete video entries.",
       "category": "backend",
-      "image": "images/notes-flask.jpg",
+      "image": "imgs/projects/backend/blog posts api.png",
       "tech": ["Django", "Django REST Framework"],
       "links": [
         {
           "type": "github",
-          "url": "https://github.com/ahmedsamir45/Video-API"
+          "url": "https://github.com/ahmedsamir45/Blog-Post-API"
         }
       ]
     },
@@ -545,7 +545,7 @@
       "title": "Misr International Clinic Database",
       "description": "This project sets up a relational SQL database for managing clinic employees and patients, with linked tables and basic queries.",
       "category": "backend",
-      "image": "images/notes-flask.jpg",
+      "image": "imgs/projects/backend/Misr International Clinic Database.png",
       "tech": ["SQL"],
       "links": [
         {
@@ -558,7 +558,7 @@
       "title": "El Badr Marble Database",
       "description": "This project sets up a relational SQL database for managing clinic employees and patients, with linked tables and basic queries.",
       "category": "backend",
-      "image": "images/notes-flask.jpg",
+      "image": "imgs/projects/backend/el badr marble database.png",
       "tech": ["SQL"],
       "links": [
         {
@@ -571,7 +571,7 @@
       "title": "FreeCodeCamp Responsive design Projects",
       "description": "collection of html css projects of freecodecamp certification",
       "category": "frontend",
-      "image": "images/product-landing-page.jpg",
+      "image": "imgs/projects/frontend/responsive web desgin.png",
       "tech": ["HTML", "CSS"],
       "links": [
         {
@@ -585,7 +585,7 @@
       "title": "Image Editor",
       "description": "Image filter editor using JavaScript.",
       "category": "frontend",
-      "image": "images/image-editor.jpg",
+      "image": "imgs/projects/frontend/image editor.png",
       "tech": ["JavaScript", "HTML", "CSS"],
       "links": [
         {
@@ -603,7 +603,7 @@
       "title": "FreeCodeCamp Machine Learning Projects",
       "description": "A collection of 5 machine learning projects built as part of the freeCodeCamp assignment.",
       "category": "ai",
-      "image": "images/freecodecamp-ml.jpg",
+      "image": "imgs/projects/ai/ML freecodecamp.png",
       "tech": ["Python", "Machine Learning", "Deep Learning"],
       "links": [
         {
