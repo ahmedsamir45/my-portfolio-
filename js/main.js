@@ -1,166 +1,73 @@
-// Start navbar
-function showSidebar() {
-  const sidebar = document.querySelector('.sidebar');
-  sidebar.classList.add('active'); // Add active class to slide in
-}
+// Theme Toggle Logic
+// Theme Toggle Logic
+console.log("DEBUG: main.js v2.0 loaded");
+function setupThemeToggle() {
+  const toggles = [
+    document.getElementById('theme-toggle-desktop'),
+    document.getElementById('mobile-theme-toggle')
+  ];
 
-function hideSidebar() {
-  const sidebar = document.querySelector('.sidebar');
-  sidebar.classList.remove('active'); // Remove active class to slide out
-}
+  const body = document.body;
 
-// Close sidebar when a link is clicked
-const links = document.querySelectorAll('.sidebar li a');
-links.forEach((link) => {
-  link.addEventListener('click', () => {
-      hideSidebar();
+  // Check for saved theme
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  body.setAttribute('data-theme', savedTheme);
+
+  // Update all toggle icons
+  toggles.forEach(toggle => {
+    if (toggle) updateIcon(toggle, savedTheme);
   });
-});
 
-// Close sidebar when the screen is resized to desktop size
-function handleMediaQuery(mediaQuery) {
-  const sidebar = document.querySelector('.sidebar');
-  if (mediaQuery.matches) {
-      hideSidebar(); // Hide sidebar on larger screens
+  toggles.forEach(toggle => {
+    if (!toggle) return;
+
+    toggle.addEventListener('click', () => {
+      const currentTheme = body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+      body.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+
+      // Update all icons
+      toggles.forEach(t => {
+        if (t) updateIcon(t, newTheme);
+      });
+    });
+  });
+}
+
+function updateIcon(btn, theme) {
+  const icon = btn.querySelector('i');
+  if (theme === 'dark') {
+    icon.classList.replace('fa-moon', 'fa-sun');
+  } else {
+    icon.classList.replace('fa-sun', 'fa-moon');
   }
 }
 
-// Define the media query
-const mediaQuery = window.matchMedia('(min-width: 1135px)');
-
-// Listen for changes in the media query
-mediaQuery.addListener(handleMediaQuery);
-
-// End navbar
+// Initialize Theme Toggles
+setupThemeToggle();
 
 
-// start image slider projects 
-const cardWrapper = document.querySelector('.card-wrapper')
-const widthToScroll = cardWrapper.children[0].offsetWidth
-const arrowPrev = document.querySelector('.arrow.prev')
-const arrowNext = document.querySelector('.arrow.next')
-const cardBounding = cardWrapper.getBoundingClientRect()
+// Global Animation Function for dynamic content
+// Global Animation Function for dynamic content
+window.animateDynamicContent = function (selector) {
+  // Use a small timeout to ensure DOM is ready
+  setTimeout(() => {
+    const elements = document.querySelectorAll(selector);
+    elements.forEach((el, index) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+
+      setTimeout(() => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      }, index * 100);
+    });
+  }, 100);
+};
+
+// Initial triggers
 
 
-let currScroll = 0
-let initPos = 0
-let clicked = false
-
-var no_projects = [...document.querySelectorAll(".card-item")].length
-
-
-arrowPrev.onclick = function() {
-  cardWrapper.scrollLeft -= widthToScroll
-}
-
-arrowNext.onclick = function() {
-  cardWrapper.scrollLeft += widthToScroll
-}
-
-cardWrapper.onmousedown = function(e) {
-  cardWrapper.classList.add('grab')
-  initPos = e.clientX - cardBounding.left
-  currScroll = cardWrapper.scrollLeft
-  clicked = true
-}
-
-cardWrapper.onmousemove = function(e) {
-  if(clicked) {
-    const xPos = e.clientX - cardBounding.left
-    cardWrapper.scrollLeft = currScroll + -(xPos - initPos)
-  }
-}
-
-cardWrapper.onmouseup = mouseUpAndLeave
-cardWrapper.onmouseleave = mouseUpAndLeave
-
-function mouseUpAndLeave() {
-  cardWrapper.classList.remove('grab')
-  clicked = false
-}
-
-// end image slider projects 
-
-
-// const urlPageTitle = "JS Single Page Application Router";
-
-// // Define routes with paths to your templates
-// const urlRoutes = {
-//   404: {
-//     template: "templates/404.html", // Adjusted path
-//     title: "404 | " + urlPageTitle,
-//     description: "Page not found",
-//   },
-//   "/": {
-//     template: "templates/index.html",
-//     title: "Home | " + urlPageTitle,
-//     description: "This is the home page",
-//   },
-//   "/about": {
-//     template: "templates/about.html",
-//     title: "About Us | " + urlPageTitle,
-//     description: "This is the about page",
-//   },
-//   "/contact": {
-//     template: "templates/contact.html",
-//     title: "Contact Us | " + urlPageTitle,
-//     description: "This is the contact page",
-//   },
-//   "/certifications": {
-//     template: "templates/certifications.html",
-//     title: "Certifications | " + urlPageTitle,
-//     description: "This is the certifications page",
-//   },
-//   "/projects": {
-//     template: "templates/projects.html",
-//     title: "Projects | " + urlPageTitle,
-//     description: "This is the projects page",
-//   },
-// };
-
-// // Function to handle navigation
-// const urlRoute = (event) => {
-//   event = event || window.event;
-//   event.preventDefault();
-//   const targetLink = event.currentTarget.getAttribute("href");
-//   window.history.pushState({}, "", targetLink);
-//   urlLocationHandler();
-// };
-
-// // Function to handle URL location changes
-// const urlLocationHandler = async () => {
-//   let location = window.location.pathname;
-//   if (location.length === 0) location = "/";
-
-//   const route = urlRoutes[location] || urlRoutes["404"];
-
-//   try {
-//     const html = await fetch(route.template).then((response) => {
-//       if (!response.ok) throw new Error("Failed to load template");
-//       return response.text();
-//     });
-
-//     document.getElementById("content").innerHTML = html;
-//     document.title = route.title;
-//     document
-//       .querySelector('meta[name="description"]')
-//       .setAttribute("content", route.description);
-//   } catch (error) {
-//     console.error("Error loading page:", error);
-//     document.getElementById("content").innerHTML = "<h1>Error loading page</h1>";
-//   }
-// };
-
-// // Event listener for navigation links
-// document.addEventListener("click", (e) => {
-//   const target = e.target.closest("nav a"); // Ensure it's a nav link
-//   if (!target) return;
-//   e.preventDefault();
-//   urlRoute(e);
-// });
-
-// // Handle browser navigation (back/forward)
-// window.onpopstate = urlLocationHandler;
-
-// // Initial page load handling
-// urlLocationHandler();

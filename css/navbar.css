@@ -1,35 +1,35 @@
 /* Start navbar */
 nav {
-  background-color: var(--nav-color);
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  background-color: var(--nav-bg);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   position: fixed;
-  width: calc(100% - 20px); /* Adjust width to account for margin */
-  top: 0;
-  left: 10px; /* Align to the left with a 10px offset */
+  width: calc(100% - 40px);
+  top: 20px;
+  left: 20px;
   z-index: 1000;
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 25px;
-  margin: 10px 10px 10px 0; /* Adjust margin to prevent shifting */
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 
 nav .navbar {
-  width: 100%; /* Make navbar take full width */
-  max-width: 1200px; /* Optional: Set a max-width for larger screens */
+  width: 100%;
+  /* Make navbar take full width */
+  max-width: 1200px;
+  /* Optional: Set a max-width for larger screens */
 
-  display: flex;
-  justify-content: center; /* Space out logo and links */
-  align-items: center;
-}
-
-nav .logo {
   display: flex;
   justify-content: center;
+  /* Space out logo and links */
   align-items: center;
-  width: fit-content;
 }
+
+
 
 nav .logo img {
   width: 130px;
@@ -39,8 +39,10 @@ nav ul {
   list-style: none;
   display: flex;
   align-items: center;
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  margin: 0;
+  /* Remove default margin */
+  padding: 0;
+  /* Remove default padding */
 }
 
 nav li {
@@ -50,82 +52,135 @@ nav li {
 
 nav a {
   height: 100%;
-  padding: 0 30px;
+  padding: 0 25px;
   text-decoration: none;
   display: flex;
   align-items: center;
-  color: white;
+  color: var(--text-color);
+  font-weight: 500;
   transition: var(--main-transition);
-  border-radius: 50px;
+  border-radius: 12px;
 }
 
 nav a:hover {
-  background-color: var(--addition-color);
+  background-color: var(--primary-accent);
+  color: #ffffff;
 }
 
-/* Move the burger icon to the right */
-nav .menu-button {
-  margin-left: auto; /* Push the burger icon to the right */
-}
 
-.sidebar {
+
+
+/* Mobile Bottom Navigation */
+.mobile-bottom-nav {
   position: fixed;
-  top: 0;
-  right: -261px; /* Start off-screen */
-  height: 100vh;
-  width: 250px;
-  background-color: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-  list-style: none;
+  bottom: 0 !important;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav-item {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  background-color: var(--nav-color);
-  transition: right 0.3s ease-in-out; /* Add animation */
-  z-index: 1001; /* Ensure it appears above other content */
+  align-items: center;
+  gap: 4px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.7rem;
+  font-weight: 600;
+  transition: var(--main-transition);
+  padding: 10px;
 }
 
-.sidebar.active {
-  right: 0; /* Slide in */
+.mobile-nav-item i {
+  font-size: 1.25rem;
 }
 
-.sidebar li {
-  width: 100%;
-
+.mobile-nav-item:hover,
+.mobile-nav-item.active {
+  color: white;
 }
 
-.sidebar a {
-  width: 100%;
+
+/* Desktop Theme Toggle */
+#theme-toggle-desktop {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 15px;
+  transition: var(--main-transition);
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
-.menu-button {
+#theme-toggle-desktop:hover {
+  color: var(--primary-accent);
+}
+
+/* Mobile Theme Toggle (Fixed Top-Left) */
+.mobile-theme-btn {
   display: none;
+  /* Hidden by default, shown in media query */
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  font-size: 1.2rem;
+  z-index: 1001;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: var(--main-transition);
 }
 
+.mobile-theme-btn:hover {
+  color: var(--primary-accent);
+  transform: rotate(15deg);
+}
+
+/* Nav responsiveness */
 @media (max-width: 1135px) {
-  .hideOnMobile {
-      display: none;
+  .mobile-bottom-nav {
+    display: flex;
+    /* Floating style with margins */
+    width: calc(100% - 40px);
+    left: 20px;
+    bottom: 20px !important;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   }
 
-  .menu-button {
-      display: block;
+  nav {
+    display: none;
+    top: auto;
   }
 
-  nav .navbar {
-      margin-right: 10px;
+  .mobile-theme-btn {
+    display: flex;
+  }
+
+  .container {
+    margin-top: 20px;
   }
 }
-
-@media (max-width: 400px) {
-  .sidebar {
-      width: 90%;
-      right: -110%; /* Start off-screen for mobile */
-  }
-
-  .sidebar.active {
-      right: 0; /* Slide in for mobile */
-  }
-}
-/* End navbar */

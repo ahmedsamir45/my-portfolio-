@@ -1,8 +1,8 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const gallery = document.getElementById('cert-gallery');
     const tabsContainer = document.querySelector('.cert-tabs');
     let allCertifications = [];
-    
+
     // Tab data - we'll generate these dynamically
     const tabData = [
         { category: 'ai', icon: 'brain', label: 'AI' },
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function generateTabs() {
         // Clear existing tabs
         tabsContainer.innerHTML = '';
-        
+
         // Create all tabs except 'All'
         tabData.filter(tab => tab.category !== 'all').forEach(tab => {
             const tabButton = document.createElement('button');
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
             tabButton.innerHTML = `<i class="fas fa-${tab.icon}"></i> ${tab.label}`;
             tabsContainer.appendChild(tabButton);
         });
-        
+
         // Create 'All' tab and add it to the end
         const allTab = tabData.find(tab => tab.category === 'all');
         if (allTab) {
@@ -51,35 +51,35 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(data => {
             allCertifications = data.certifications;
-            
+
             // Generate tabs dynamically
             generateTabs();
-            
+
             // Get all tab buttons after they're generated
             const tabButtons = document.querySelectorAll('.cert-tab');
-            
+
             // Activate the first category tab by default (skip 'All' tab)
             if (tabButtons.length > 0 && allCertifications.length > 0) {
                 // Find the first tab that isn't 'All'
-                const firstNonAllTab = Array.from(tabButtons).find(btn => 
-                    btn.dataset.category !== 'all' && 
+                const firstNonAllTab = Array.from(tabButtons).find(btn =>
+                    btn.dataset.category !== 'all' &&
                     allCertifications.some(cat => cat.shortcut === btn.dataset.category)
                 );
-                
+
                 // Default to first tab if available, otherwise use 'All'
                 const defaultTab = firstNonAllTab || tabButtons[tabButtons.length - 1];
-                
+
                 // Activate the default tab
                 defaultTab.classList.add('active');
                 defaultTab.setAttribute('aria-selected', 'true');
-                
+
                 // Render certifications for default category
                 renderCertifications(defaultTab.dataset.category);
             }
-            
+
             // Add click event listeners to all tabs
             tabButtons.forEach(button => {
-                button.addEventListener('click', function() {
+                button.addEventListener('click', function () {
                     tabButtons.forEach(btn => {
                         btn.classList.remove('active');
                         btn.setAttribute('aria-selected', 'false');
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Render certifications
     function renderCertifications(category) {
         gallery.innerHTML = '';
-        
+
         if (category === 'all') {
             allCertifications.forEach(categoryData => {
                 categoryData.cert.forEach((cert, index) => {
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         } else {
             const categoryData = allCertifications.find(cat => cat.shortcut === category);
-            
+
             if (categoryData?.cert?.length) {
                 categoryData.cert.forEach((cert, index) => {
                     createCertCard(cert, categoryData.category, index);
@@ -126,6 +126,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 `;
             }
         }
+
+        // Trigger GSAP animations
+        if (window.animateDynamicContent) {
+            window.animateDynamicContent('.cert-card');
+        }
     }
 
     // Create individual certification card
@@ -133,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const card = document.createElement('div');
         card.className = 'cert-card';
         card.style.animationDelay = `${index * 0.1}s`;
-        
+
         card.innerHTML = `
             <div class="cert-img-container">
                 <img 
@@ -155,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
         `;
-        
+
         gallery.appendChild(card);
     }
-    });
+});

@@ -3,17 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Samir</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/certfications.css">
-    <link rel="stylesheet" href="css/projects.css">
-    <link rel="stylesheet" href="css/welcome.css">
-    <link rel="stylesheet" href="css/services.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/skills.css">
+    <meta name="description" content="Ahmed Samir - Software Developer specializing in Full-Stack Web Development, AI, and Cyber Security. Explore my projects and certifications.">
+    <meta name="keywords" content="Ahmed Samir, Software Developer, Full-Stack, Python, Django, Flask, Machine Learning, AI, Cyber Security, Portfolio">
+    <meta name="author" content="Ahmed Samir">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ahmedsamir45.github.io/">
+    <meta property="og:title" content="Ahmed Samir | Software Developer Portfolio">
+    <meta property="og:description" content="Software Developer specializing in Full-Stack Web Development, AI, and Cyber Security.">
+    <meta property="og:image" content="imgs/myLogo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ahmedsamir45.github.io/">
+    <meta property="twitter:title" content="Ahmed Samir | Software Developer Portfolio">
+    <meta property="twitter:description" content="Software Developer specializing in Full-Stack Web Development, AI, and Cyber Security.">
+    <meta property="twitter:image" content="imgs/myLogo.png">
+
+    <title>Ahmed Samir | Software Developer</title>
+    <link rel="stylesheet" href="css/style.css?v=2.0">
+    <link rel="stylesheet" href="css/all.min.css?v=2.0">
+    <link rel="stylesheet" href="css/normalize.css?v=2.0">
+    <link rel="stylesheet" href="css/certfications.css?v=2.0">
+    <link rel="stylesheet" href="css/projects.css?v=2.0">
+    <link rel="stylesheet" href="css/welcome.css?v=2.0">
+    <link rel="stylesheet" href="css/services.css?v=2.0">
+    <link rel="stylesheet" href="css/navbar.css?v=2.0">
+    <link rel="stylesheet" href="css/skills.css?v=2.0">
     <link rel="icon" href="imgs/myLogo.png" type="image/x-icon">
+
 </head>
 <body>
     <div id="particles-js"></div>
@@ -21,58 +40,74 @@
 
 
     <nav>
-        
         <ul class="navbar">
-        
-          <li class="hideOnMobile"><a  href="#about">About</a></li>
-          <li class="hideOnMobile"><a  href="#skills">Skills</a></li>
-          
-          <li class="hideOnMobile"><a  href="#certification">Certifications</a></li>
+          <li class="hideOnMobile"><a href="#about">About</a></li>
+          <li class="hideOnMobile"><a href="#skills">Skills</a></li>
+          <li class="hideOnMobile"><a href="#certification">Certifications</a></li>
           <li class="hideOnMobile"><a href="#projects">Projects</a></li>
-          <li class="hideOnMobile"><a  href="#services">Services</a></li>
-          <li class="hideOnMobile"><a  href="#contact">Contact Us</a></li>
-          
-          <li class="menu-button" onclick=showSidebar()><a ><i class="fa-solid fa-bars"></i></a></li>
-        </ul>
-        <ul class="sidebar">
-          <li onclick=hideSidebar()><a ><i class="fa-solid fa-xmark"></i></a></li>
-          <li><a  href="#about">About</a></li>
-          <li><a  href="#skills">Skills</a></li>
-          <li><a  href="#certification">Certifications</a></li>
-          <li><a  href="#projects">Pojects</a></li>
-          <li><a  href="#services">services</a></li>
-          <li><a  href="#contact">Contact Us</a></li>
-      
+          <li class="hideOnMobile"><a href="#services">Services</a></li>
+          <li class="hideOnMobile"><a href="#contact">Contact</a></li>
+          <!-- Desktop Theme Toggle -->
+          <li class="hideOnMobile">
+            <button id="theme-toggle-desktop" class="theme-btn" aria-label="Toggle dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+          </li>
         </ul>
     </nav>
+
+    <!-- Mobile Top-Left Theme Toggle -->
+    <button id="mobile-theme-toggle" class="mobile-theme-btn" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <nav class="mobile-bottom-nav">
+      <a href="#welcome" class="mobile-nav-item">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </a>
+      <a href="#skills" class="mobile-nav-item">
+        <i class="fas fa-tools"></i>
+        <span>Skills</span>
+      </a>
+      <a href="#projects" class="mobile-nav-item">
+        <i class="fas fa-code"></i>
+        <span>Projects</span>
+      </a>
+      <a href="#certification" class="mobile-nav-item">
+        <i class="fas fa-certificate"></i>
+        <span>Certs</span>
+      </a>
+      <a href="#contact" class="mobile-nav-item">
+        <i class="fas fa-envelope"></i>
+        <span>Contact</span>
+      </a>
+    </nav>
+
    
-    <div class="welcome">
-      <div class="image"><img src="imgs/myImage.jpg" alt=""></div>
-      <p>Hello I am Ahmed Samir</p>
-      <span id="typing">I am a software developer</span>
-      <ul class="links">
-        <li><a target="_blank" href="https://api.whatsapp.com/send?phone=+201062303374&text=Hi"><i class="fa-brands fa-whatsapp"></i></a></li>
-        <li><a target="_blank" href="https://www.linkedin.com/in/ahmed-samir-917ba22a5/"><i class="fa-brands fa-linkedin"></i></a></li>
-        <li><a target="_blank" href="https://github.com/ahmedsamir45"><i class="fa-brands fa-github"></i></a></li>
-        <li><a target="_blank" href="https://www.kaggle.com/ahmedsamir6788"><i class="fa-brands fa-kaggle"></i></a></li>
-        <li><a target="_blank" href="https://www.youtube.com/@AhmedSamir-sh1eq"><i class="fa-brands fa-youtube"></i></a></li>
-      </ul>
-      <a  href="cv/cv.pdf" download class="download"><i class="fa-solid fa-file-arrow-down"></i>Download CV</a>
-      <a target="_blank" href="https://ahmedsamir45.github.io/ahsamir-links/">contact me <i class="fa-solid fa-up-right-from-square"></i></a>
-      <a  href="#about"class="go-down">
-        <i class="fas fa-angle-double-down fa-2x"></i>
-    </a>
+    <div class="welcome" id="welcome">
+      <div class="welcome-content">
+        <div class="image"><img src="imgs/myImage.jpg" alt="Ahmed Samir"></div>
+        <p>Hello I am Ahmed Samir</p>
+        <span id="typing">I am a software developer</span>
+        <ul class="links">
+          <li><a target="_blank" href="https://www.linkedin.com/in/ahmed-samir-917ba22a5/" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li><a target="_blank" href="https://github.com/ahmedsamir45" title="GitHub"><i class="fa-brands fa-github"></i></a></li>
+          <li><a target="_blank" href="https://www.kaggle.com/ahmedsamir6788" title="Kaggle"><i class="fa-brands fa-kaggle"></i></a></li>
+          <li><a target="_blank" href="https://www.youtube.com/@AhmedSamir-sh1eq" title="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+        </ul>
+        <div class="action-buttons">
+            <a target="_blank" href="https://drive.google.com/drive/u/0/folders/1rR8PseIKDfnAgEscw6UfLx4gKKL7I9MZ" class="download"><i class="fa-solid fa-folder-open"></i>View CV</a>
+            <a target="_blank" href="https://ahmedsamir45.github.io/ahsamir-links/" class="contact-btn">All Links <i class="fa-solid fa-up-right-from-square"></i></a>
+        </div>
+      </div>
     </div>
     <div class="container">
       
   <div class="about" id="about">
 <h2 class="main-heading" >ABOUT</h2>
   <p>
-    Student at Helwan University, studying computer science and mathematics.
-    Passionate about cyber security with expertise in cloud computing and network security. Skilled in front-end development (HTML, CSS, JavaScript, Bootstrap)
-    and proficient in data science and machine learning,
-    working with sklearn, pandas, numpy, and TensorFlow. Self-taught through online courses, seeking opportunities to apply knowledge and grow in the field.
-  </p>
+Computer Science & Mathematics graduate with a solid foundation in backend and frontend development, web technologies, and cybersecurity. Experienced in designing and implementing scalable, secure, and user-friendly web solutions. Skilled in backend frameworks such as Django and Flask, RESTful API development, and frontend technologies including HTML, CSS, JavaScript, React, and Bootstrap. Adept at delivering technical content, mentoring, and guiding teams on best practices in software development. Passionate about problem-solving, continuous learning, and contributing to innovative projects.    I am a computer science and mathematics student at Helwan University with a strong foundation in both theoretical and practical aspects of computer science. I am passionate about building innovative solutions and continuously expanding my knowledge in emerging technologies. My academic background has equipped me with strong analytical and problem-solving skills, which I apply to develop efficient and scalable software applications. I am a quick learner and enjoy working on challenging projects that push my boundaries and help me grow as a developer.  </p>
 </div>
 <div class="skills" id="skills">
   <h2 class="main-heading">SKILLS</h2>
@@ -195,7 +230,7 @@
 </div>
 <section class="certifications-section" id="certification">
   <div class="section-header">
-    <h2 class="main-heading">Certfications</h2>
+    <h2 class="main-heading">Certifications</h2>
       
   </div>
 
@@ -236,7 +271,7 @@
 
 </div>
 <div class="services" id="services">
-  <h2 class="main-heading">servcies</h2>
+  <h2 class="main-heading">Services</h2>
   
     <h3 class="second-heading">ask me for</h3>
     <div class="serv-warpper">
@@ -252,7 +287,7 @@
     
 
   </div>
-  <h3 class="second-heading">freelance accounts</h3>
+  <h3 class="second-heading">Freelance Accounts</h3>
   <div class="acounts">
     <a target="_blank" class="acount" href="https://khamsat.com/user/ahmed_samir6788">khamsat <i class="fa-solid fa-up-right-from-square"></i></a>
     <a target="_blank" class="acount" href="https://kafiil.com/u/ahmed_samir64">kafiil <i class="fa-solid fa-up-right-from-square"></i></a>    
@@ -264,35 +299,105 @@
   </div>
   </div>
 <div class="contact" id="contact">
-  <h2 class="main-heading">contact us</h2>
-  <div class="form">
-    <form onsubmit="sendEmail(); reset(); return false">
-      <input type="text" name="" id="name" placeholder="your name" required>
-      <input type="email" name="" id="email" placeholder="email id" required>
-      <textarea name="" id="message" cols="30" placeholder="leave your message"></textarea>
-      <button id="submit" type="submit">send</button>
-    </form>
+  <h2 class="main-heading">Get In Touch</h2>
+  <div class="contact-container">
+    <div class="contact-info">
+      <div class="info-card">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <h3>Email</h3>
+          <p>ahmedsamir6788@gmail.com</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <i class="fas fa-phone"></i>
+        <div>
+          <h3>Phone</h3>
+          <p>+20 106 230 3374</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <i class="fas fa-location-dot"></i>
+        <div>
+          <h3>Location</h3>
+          <p>Cairo, Egypt</p>
+        </div>
+      </div>
+      <div class="social-links-circle">
+        <a href="https://linkedin.com/in/ahmed-samir-917ba22a5" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/ahmedsamir45" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.youtube.com/@AhmedSamir-sh1eq" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.kaggle.com/ahmedsamir6788" target="_blank"><i class="fab fa-kaggle"></i></a>
+      </div>
+    </div>
+    <div class="contact-form-wrapper">
+      <form onsubmit="sendEmail(); this.reset(); return false">
+        <div class="form-group">
+          <input type="text" id="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <button id="submit" type="submit" class="premium-btn">
+          <span>Send Message</span>
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
   </div>
-
 </div>
 </div>
-
 
 <footer>
-  <div>
-      <a target="_blank" href="https://linkedin.com/in/ahmed-samir-917ba22a5"  target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-      <a target="_blank" href="https://github.com/ahmedsamir45"  target="_blank"><i class="fa-brands fa-github"></i></a>
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h3>Ahmed Samir</h3>
+      <p>Building modern web experiences and AI-powered solutions.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certification">Certifications</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+    </div>
+    <div class="footer-newsletter">
+      <h4>Connect</h4>
+      <div class="social-footer">
+        <a href="https://www.linkedin.com/in/ahmed-samir-917ba22a5" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/ahmedsamir45" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.kaggle.com/ahmedsamir6788" target="_blank" title="Kaggle"><i class="fab fa-kaggle"></i></a>
+        <a href="https://www.youtube.com/@AhmedSamir-sh1eq" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.credly.com/users/ahmed-samir.af9fedfe" target="_blank" title="Credly"><i class="fa-solid fa-award"></i></a>
+        <a href="https://www.behance.net/ahmedsamer66" target="_blank" title="Behance"><i class="fa-brands fa-behance"></i></a>
+        <a href="https://www.hackerrank.com/profile/ahmedsamer6788" target="_blank" title="HackerRank"><i class="fa-brands fa-hackerrank"></i></a>
+        <a href="https://dev.to/ahmedsamir45" target="_blank" title="Dev.to"><i class="fa-brands fa-dev"></i></a>
+        <a href="https://www.codewars.com/users/ahmedsamir45" target="_blank" title="Codewars"><i class="fa-solid fa-code"></i></a>
+        <a href="mailto:ahmedsamer6788@gmail.com" target="_blank" title="Gmail"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=+201062303374&text=Hi" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
   </div>
-  <span><i class="fa-regular fa-copyright"></i> By Ahmed Samir</span>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Ahmed Samir. All rights reserved.</p>
+  </div>
 </footer>
 
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/projects.js"></script>
-    <script src="js/certfication.js"></script>
+
+
+
+    <script src="js/contact.js?v=2.0"></script>
+    <script src="js/main.js?v=2.0"></script>
+    <script src="js/projects.js?v=2.0"></script>
+    <script src="js/certfication.js?v=2.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
-      particlesJS.load('particles-js', 'js/particles.json', function() {
+      particlesJS.load('particles-js', 'js/particles.json?v=2.0', function() {
         console.log('particles.js loaded - callback');
       });
     </script>
@@ -303,9 +408,13 @@
       canvas.height = window.innerHeight;
 
       function randomColor() {
-        const colors = ['#6B654B', '#D4DF9E', '#4A4B2F'];
+        const isDark = document.body.getAttribute('data-theme') === 'dark';
+        const colors = isDark ? 
+          ['#8b5cf6', '#0ea5e9', '#6366f1'] : 
+          ['#6366f1', '#0ea5e9', '#4f46e5'];
         return colors[Math.floor(Math.random() * colors.length)];
       }
+
 
       let circles = [];
       for (let i = 0; i < 50; i++) {
