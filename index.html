@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="css/services.css?v=2.0">
     <link rel="stylesheet" href="css/navbar.css?v=2.0">
     <link rel="stylesheet" href="css/skills.css?v=2.0">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="icon" href="imgs/myLogo.png" type="image/x-icon">
 
 </head>
@@ -86,7 +87,7 @@
 
    
     <div class="welcome" id="welcome">
-      <div class="welcome-content">
+      <div class="welcome-content wow animate__fadeIn" data-wow-duration="1.5s">
         <div class="image"><img src="imgs/myImage.jpg" alt="Ahmed Samir"></div>
         <p>Hello I am Ahmed Samir</p>
         <span id="typing">I am a software developer</span>
@@ -104,12 +105,12 @@
     </div>
     <div class="container">
       
-  <div class="about" id="about">
+  <div class="about wow animate__fadeInUp" id="about">
 <h2 class="main-heading" >ABOUT</h2>
   <p>
 Computer Science & Mathematics graduate with a solid foundation in backend and frontend development, web technologies, and cybersecurity. Experienced in designing and implementing scalable, secure, and user-friendly web solutions. Skilled in backend frameworks such as Django and Flask, RESTful API development, and frontend technologies including HTML, CSS, JavaScript, React, and Bootstrap. Adept at delivering technical content, mentoring, and guiding teams on best practices in software development. Passionate about problem-solving, continuous learning, and contributing to innovative projects.    I am a computer science and mathematics student at Helwan University with a strong foundation in both theoretical and practical aspects of computer science. I am passionate about building innovative solutions and continuously expanding my knowledge in emerging technologies. My academic background has equipped me with strong analytical and problem-solving skills, which I apply to develop efficient and scalable software applications. I am a quick learner and enjoy working on challenging projects that push my boundaries and help me grow as a developer.  </p>
 </div>
-<div class="skills" id="skills">
+<div class="skills wow animate__fadeInUp" id="skills" data-wow-delay="0.2s">
   <h2 class="main-heading">SKILLS</h2>
   <div class="skills-container">
     <div class="skill-card">
@@ -228,7 +229,7 @@ Computer Science & Mathematics graduate with a solid foundation in backend and f
     </div>
   </div>
 </div>
-<section class="certifications-section" id="certification">
+<section class="certifications-section wow animate__fadeInUp" id="certification" data-wow-delay="0.3s">
   <div class="section-header">
     <h2 class="main-heading">Certifications</h2>
       
@@ -248,7 +249,7 @@ Computer Science & Mathematics graduate with a solid foundation in backend and f
 </section>
 
 
-<div class="projects" id="projects">
+<div class="projects wow animate__fadeInUp" id="projects" data-wow-delay="0.4s">
   <h2 class="main-heading">projects</h2>
   <div class="project-tabs" role="tablist" aria-label="Project Categories">
     <button class="project-tab active" data-category="all" role="tab" aria-selected="true">
@@ -270,7 +271,7 @@ Computer Science & Mathematics graduate with a solid foundation in backend and f
 </div>
 
 </div>
-<div class="services" id="services">
+<div class="services wow animate__fadeInLeft" id="services" data-wow-offset="100">
   <h2 class="main-heading">Services</h2>
   
     <h3 class="second-heading">ask me for</h3>
@@ -298,7 +299,7 @@ Computer Science & Mathematics graduate with a solid foundation in backend and f
     <a target="_blank" class="acount" href="https://freelanceyard.com/en/freelancers/ahmed-samir-27">Freelanceyard <i class="fa-solid fa-up-right-from-square"></i></a>
   </div>
   </div>
-<div class="contact" id="contact">
+<div class="contact wow animate__fadeInRight" id="contact" data-wow-offset="100">
   <h2 class="main-heading">Get In Touch</h2>
   <div class="contact-container">
     <div class="contact-info">
@@ -352,7 +353,7 @@ Computer Science & Mathematics graduate with a solid foundation in backend and f
 </div>
 
 <footer>
-  <div class="footer-container">
+  <div class="footer-container wow animate__fadeIn" data-wow-duration="2s">
     <div class="footer-brand">
       <h3>Ahmed Samir</h3>
       <p>Building modern web experiences and AI-powered solutions.</p>
@@ -395,6 +396,12 @@ Computer Science & Mathematics graduate with a solid foundation in backend and f
     <script src="js/main.js?v=2.0"></script>
     <script src="js/projects.js?v=2.0"></script>
     <script src="js/certfication.js?v=2.0"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW({
+        animateClass: 'animate__animated',
+      }).init();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
       particlesJS.load('particles-js', 'js/particles.json?v=2.0', function() {
